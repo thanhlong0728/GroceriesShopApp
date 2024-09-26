@@ -14,6 +14,9 @@
 		04F89E4B2CA519F600C14C5F /* GroceriesShopAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F89E4A2CA519F600C14C5F /* GroceriesShopAppTests.swift */; };
 		04F89E552CA519F600C14C5F /* GroceriesShopAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F89E542CA519F600C14C5F /* GroceriesShopAppUITests.swift */; };
 		04F89E572CA519F600C14C5F /* GroceriesShopAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F89E562CA519F600C14C5F /* GroceriesShopAppUITestsLaunchTests.swift */; };
+		04F89E672CA51E1400C14C5F /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04F89E642CA51E1400C14C5F /* Gilroy-SemiBold.ttf */; };
+		04F89E682CA51E1400C14C5F /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04F89E652CA51E1400C14C5F /* Gilroy-Bold.ttf */; };
+		04F89E692CA51E1400C14C5F /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04F89E662CA51E1400C14C5F /* Gilroy-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		04F89E502CA519F600C14C5F /* GroceriesShopAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroceriesShopAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F89E542CA519F600C14C5F /* GroceriesShopAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesShopAppUITests.swift; sourceTree = "<group>"; };
 		04F89E562CA519F600C14C5F /* GroceriesShopAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesShopAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04F89E642CA51E1400C14C5F /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
+		04F89E652CA51E1400C14C5F /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
+		04F89E662CA51E1400C14C5F /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 		04F89E382CA519F400C14C5F /* GroceriesShopApp */ = {
 			isa = PBXGroup;
 			children = (
+				04F89E632CA51D8000C14C5F /* font */,
 				04F89E392CA519F400C14C5F /* GroceriesShopAppApp.swift */,
 				04F89E3B2CA519F400C14C5F /* ContentView.swift */,
 				04F89E3D2CA519F600C14C5F /* Assets.xcassets */,
@@ -125,6 +132,16 @@
 				04F89E562CA519F600C14C5F /* GroceriesShopAppUITestsLaunchTests.swift */,
 			);
 			path = GroceriesShopAppUITests;
+			sourceTree = "<group>";
+		};
+		04F89E632CA51D8000C14C5F /* font */ = {
+			isa = PBXGroup;
+			children = (
+				04F89E652CA51E1400C14C5F /* Gilroy-Bold.ttf */,
+				04F89E662CA51E1400C14C5F /* Gilroy-Regular.ttf */,
+				04F89E642CA51E1400C14C5F /* Gilroy-SemiBold.ttf */,
+			);
+			path = font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +248,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F89E692CA51E1400C14C5F /* Gilroy-Regular.ttf in Resources */,
 				04F89E412CA519F600C14C5F /* Preview Assets.xcassets in Resources */,
+				04F89E672CA51E1400C14C5F /* Gilroy-SemiBold.ttf in Resources */,
 				04F89E3E2CA519F600C14C5F /* Assets.xcassets in Resources */,
+				04F89E682CA51E1400C14C5F /* Gilroy-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
