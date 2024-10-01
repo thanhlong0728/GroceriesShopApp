@@ -17,10 +17,16 @@ class MainViewModel: ObservableObject {
     @Published var showError = false
     @Published var errorMessage = ""
     
+    init(){
+        #if DEBUG
+        txtEmail = "test@gmail.com"
+        txtPassword = "123456"
+        #endif
+    }
+    
     // MARK: ServiceCall
     func serviceCallLogin(){
-        
-        if(txtEmail.isValidEmail){
+        if(!txtEmail.isValidEmail){
             self.errorMessage = "Please enter valid email address"
             self.showError = true
             return
@@ -32,11 +38,9 @@ class MainViewModel: ObservableObject {
             return
         }
         
-        ServiceCall.post(parameter: ["email": txtEmail, "password": txtPassword,"dervice_token":""], path: Globs.SV_LOGIN){
-            responseObj in
-            if let response = responseObj as? NSDictionary{
+        ServiceCall.post(parameter: ["email": txtEmail, "password": txtPassword, "dervice_token":"" ], path: Globs.SV_LOGIN) { responseObj in
+            if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1"{
-                    print(response)
                     self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Success"
                     self.showError = true
                 }else{

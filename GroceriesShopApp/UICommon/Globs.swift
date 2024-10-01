@@ -11,7 +11,7 @@ struct Globs {
     static let AppName = "Gloceries"
     static let NotificationTitle = "Notification"
     static let BASE_URL = "http://localhost:3001/api/app"
-    static let SV_LOGIN = BASE_URL + "login"
+    static let SV_LOGIN = BASE_URL + "/login"
 }
 
 struct KKey {
