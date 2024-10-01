@@ -12,7 +12,7 @@ struct GroceriesShopAppApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView{
-                WelcomeView()
+                LoginView()
             }
         }
     }
