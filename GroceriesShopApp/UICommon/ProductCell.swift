@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ProductCell: View {
     @State var pObj: ProductModel = ProductModel(dict: [:])
@@ -18,7 +19,6 @@ struct ProductCell: View {
             ProductDetailView(detailVM:  ProductDetailViewModel(prodObj: pObj) )
         } label: {
             VStack{
-                
                 WebImage(url: URL(string: pObj.image ))
                     .resizable()
                     .indicator(.activity) // Activity Indicator
