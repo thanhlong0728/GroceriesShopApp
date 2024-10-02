@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041BA48A2CAD3A5E00C47A7D /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BA4892CAD3A5E00C47A7D /* ExploreView.swift */; };
 		044478332CAB8D5A00B85009 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044478322CAB8D5A00B85009 /* MainViewModel.swift */; };
 		044478352CAB928C00B85009 /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044478342CAB928C00B85009 /* LineTextField.swift */; };
 		044478372CABA47B00B85009 /* ServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044478362CABA47B00B85009 /* ServiceCall.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041BA4892CAD3A5E00C47A7D /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		044478322CAB8D5A00B85009 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		044478342CAB928C00B85009 /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
 		044478362CABA47B00B85009 /* ServiceCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCall.swift; sourceTree = "<group>"; };
@@ -116,6 +118,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041BA4882CAD3A3F00C47A7D /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				041BA4892CAD3A5E00C47A7D /* ExploreView.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
 		0444783A2CABB52E00B85009 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +227,7 @@
 		04F89E6D2CA5330200C14C5F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				041BA4882CAD3A3F00C47A7D /* Explore */,
 				044C70CF2CABFC8600CA470A /* Home */,
 				044C70CA2CABEA5700CA470A /* MainTabView */,
 				04F89E712CA533C800C14C5F /* Login */,
@@ -424,6 +435,7 @@
 				04F89E7B2CA5430C00C14C5F /* SignInView.swift in Sources */,
 				044C70C72CABDE8500CA470A /* SignupView.swift in Sources */,
 				044478332CAB8D5A00B85009 /* MainViewModel.swift in Sources */,
+				041BA48A2CAD3A5E00C47A7D /* ExploreView.swift in Sources */,
 				044C70CC2CABEA7000CA470A /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
