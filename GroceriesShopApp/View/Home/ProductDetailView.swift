@@ -39,7 +39,7 @@ struct ProductDetailView: View {
                             .foregroundColor(.primaryText)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         Button {
-                            detailVM.serviceCallAddRemoveFav()
+                            
                         } label: {
                             
                             Image( detailVM.isFav ? "favorite" : "fav"  )
@@ -234,13 +234,7 @@ struct ProductDetailView: View {
                 .padding(.horizontal, 20)
                 
                 RoundButton(title: "Add To Basket") {
-                    CartViewModel.serviceCallAddToCart(prodId: detailVM.pObj.prodId, qty: detailVM.qty) { isDone, msg  in
-                        
-                        detailVM.qty = 1
-                        
-                        self.detailVM.errorMessage = msg
-                        self.detailVM.showError = true
-                    }
+                   
                 }
                 .padding( 20)
                 
@@ -290,7 +284,6 @@ struct ProductDetailView: View {
 
 #Preview {
     ProductDetailView(detailVM: ProductDetailViewModel(prodObj: ProductModel(dict: [
-        
             "offer_price": 2.49,
             "start_date": "2023-07-30T18:30:00.000Z",
             "end_date": "2023-08-29T18:30:00.000Z",

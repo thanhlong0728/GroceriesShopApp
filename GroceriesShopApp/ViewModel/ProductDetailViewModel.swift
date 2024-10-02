@@ -85,3 +85,4 @@ class ProductDetailViewModel: ObservableObject
             self.showError = true
         }
     }
+}
