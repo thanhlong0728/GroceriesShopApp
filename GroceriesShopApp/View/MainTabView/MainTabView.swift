@@ -13,6 +13,9 @@ struct MainTabView: View {
     
     var body: some View {
         ZStack{
+            if(homeVM.selectTab == 0) {
+                HomeView()
+            }
             VStack{
                 Spacer()
                 HStack{

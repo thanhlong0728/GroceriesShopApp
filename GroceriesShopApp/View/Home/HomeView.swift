@@ -50,12 +50,7 @@ struct HomeView: View {
                             pObj in
                             
                             ProductCell(pObj: pObj, didAddCart: {
-                                
-                                CartViewModel.serviceCallAddToCart(prodId: pObj.prodId, qty: 1) { isDone, msg in
-                                    
-                                    self.homeVM.errorMessage = msg
-                                    self.homeVM.showError = true
-                                }
+                            
                             })
                         }
                     }
