@@ -10,6 +10,12 @@
 		041BA48A2CAD3A5E00C47A7D /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BA4892CAD3A5E00C47A7D /* ExploreView.swift */; };
 		041BA48C2CAD41BC00C47A7D /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BA48B2CAD41BC00C47A7D /* SearchTextField.swift */; };
 		041BA48E2CAD42D600C47A7D /* SectionTitleAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BA48D2CAD42D600C47A7D /* SectionTitleAll.swift */; };
+		041BA4902CAD439000C47A7D /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BA48F2CAD439000C47A7D /* ProductCell.swift */; };
+		041BA4932CAD43F200C47A7D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 041BA4922CAD43F200C47A7D /* SDWebImageSwiftUI */; };
+		041BA4952CAD445F00C47A7D /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BA4942CAD445F00C47A7D /* ProductModel.swift */; };
+		041BA4972CAD44C700C47A7D /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BA4962CAD44C700C47A7D /* ProductDetailView.swift */; };
+		041BA4992CAD452A00C47A7D /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BA4982CAD452A00C47A7D /* ProductDetailViewModel.swift */; };
+		041BA49B2CAD456C00C47A7D /* NutritionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BA49A2CAD456C00C47A7D /* NutritionModel.swift */; };
 		044478332CAB8D5A00B85009 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044478322CAB8D5A00B85009 /* MainViewModel.swift */; };
 		044478352CAB928C00B85009 /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044478342CAB928C00B85009 /* LineTextField.swift */; };
 		044478372CABA47B00B85009 /* ServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044478362CABA47B00B85009 /* ServiceCall.swift */; };
@@ -62,6 +68,11 @@
 		041BA4892CAD3A5E00C47A7D /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		041BA48B2CAD41BC00C47A7D /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		041BA48D2CAD42D600C47A7D /* SectionTitleAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTitleAll.swift; sourceTree = "<group>"; };
+		041BA48F2CAD439000C47A7D /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		041BA4942CAD445F00C47A7D /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		041BA4962CAD44C700C47A7D /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		041BA4982CAD452A00C47A7D /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
+		041BA49A2CAD456C00C47A7D /* NutritionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionModel.swift; sourceTree = "<group>"; };
 		044478322CAB8D5A00B85009 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		044478342CAB928C00B85009 /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
 		044478362CABA47B00B85009 /* ServiceCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCall.swift; sourceTree = "<group>"; };
@@ -101,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041BA4932CAD43F200C47A7D /* SDWebImageSwiftUI in Frameworks */,
 				04F89E7E2CA5564300C14C5F /* CountryPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				044C70D02CABFC9300CA470A /* HomeView.swift */,
+				041BA4962CAD44C700C47A7D /* ProductDetailView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -243,6 +256,8 @@
 			isa = PBXGroup;
 			children = (
 				044C70C82CABE72A00CA470A /* UserModel.swift */,
+				041BA4942CAD445F00C47A7D /* ProductModel.swift */,
+				041BA49A2CAD456C00C47A7D /* NutritionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,6 +267,7 @@
 			children = (
 				044478322CAB8D5A00B85009 /* MainViewModel.swift */,
 				044C70CD2CABF85F00CA470A /* HomeViewModel.swift */,
+				041BA4982CAD452A00C47A7D /* ProductDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -268,6 +284,7 @@
 				044C70D22CABFD0000CA470A /* TabButton.swift */,
 				041BA48B2CAD41BC00C47A7D /* SearchTextField.swift */,
 				041BA48D2CAD42D600C47A7D /* SectionTitleAll.swift */,
+				041BA48F2CAD439000C47A7D /* ProductCell.swift */,
 			);
 			path = UICommon;
 			sourceTree = "<group>";
@@ -301,6 +318,7 @@
 			name = GroceriesShopApp;
 			packageProductDependencies = (
 				04F89E7D2CA5564300C14C5F /* CountryPicker */,
+				041BA4922CAD43F200C47A7D /* SDWebImageSwiftUI */,
 			);
 			productName = GroceriesShopApp;
 			productReference = 04F89E362CA519F400C14C5F /* GroceriesShopApp.app */;
@@ -376,6 +394,7 @@
 			mainGroup = 04F89E2D2CA519F400C14C5F;
 			packageReferences = (
 				04F89E7C2CA5564300C14C5F /* XCRemoteSwiftPackageReference "CountryPicker" */,
+				041BA4912CAD43F200C47A7D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 04F89E372CA519F400C14C5F /* Products */;
 			projectDirPath = "";
@@ -425,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F89E802CA5569B00C14C5F /* CountryPickerUI.swift in Sources */,
+				041BA4902CAD439000C47A7D /* ProductCell.swift in Sources */,
 				044478352CAB928C00B85009 /* LineTextField.swift in Sources */,
 				04F89E822CA565D400C14C5F /* LoginView.swift in Sources */,
 				044C70CE2CABF85F00CA470A /* HomeViewModel.swift in Sources */,
@@ -439,11 +459,15 @@
 				04F89E732CA533E000C14C5F /* WelcomeView.swift in Sources */,
 				044478372CABA47B00B85009 /* ServiceCall.swift in Sources */,
 				04F89E7B2CA5430C00C14C5F /* SignInView.swift in Sources */,
+				041BA49B2CAD456C00C47A7D /* NutritionModel.swift in Sources */,
 				041BA48E2CAD42D600C47A7D /* SectionTitleAll.swift in Sources */,
+				041BA4972CAD44C700C47A7D /* ProductDetailView.swift in Sources */,
 				041BA48C2CAD41BC00C47A7D /* SearchTextField.swift in Sources */,
+				041BA4952CAD445F00C47A7D /* ProductModel.swift in Sources */,
 				044C70C72CABDE8500CA470A /* SignupView.swift in Sources */,
 				044478332CAB8D5A00B85009 /* MainViewModel.swift in Sources */,
 				041BA48A2CAD3A5E00C47A7D /* ExploreView.swift in Sources */,
+				041BA4992CAD452A00C47A7D /* ProductDetailViewModel.swift in Sources */,
 				044C70CC2CABEA7000CA470A /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -790,6 +814,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		041BA4912CAD43F200C47A7D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.2;
+			};
+		};
 		04F89E7C2CA5564300C14C5F /* XCRemoteSwiftPackageReference "CountryPicker" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mobven/CountryPicker.git";
@@ -801,6 +833,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		041BA4922CAD43F200C47A7D /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 041BA4912CAD43F200C47A7D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
 		04F89E7D2CA5564300C14C5F /* CountryPicker */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 04F89E7C2CA5564300C14C5F /* XCRemoteSwiftPackageReference "CountryPicker" */;

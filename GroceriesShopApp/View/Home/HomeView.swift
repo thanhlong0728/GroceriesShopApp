@@ -44,6 +44,24 @@ struct HomeView: View {
                     
                 }
                 .padding(.horizontal, 20)
+                ScrollView(.horizontal, showsIndicators: false ) {
+                    LazyHStack(spacing: 15) {
+                        ForEach (homeVM.offerArr, id: \.id) {
+                            pObj in
+                            
+                            ProductCell(pObj: pObj, didAddCart: {
+                                
+                                CartViewModel.serviceCallAddToCart(prodId: pObj.prodId, qty: 1) { isDone, msg in
+                                    
+                                    self.homeVM.errorMessage = msg
+                                    self.homeVM.showError = true
+                                }
+                            })
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 4)
+                }
             }
         }
     }
