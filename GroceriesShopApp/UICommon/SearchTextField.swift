@@ -14,7 +14,6 @@ struct SearchTextField: View {
     
     var body: some View {
         HStack(spacing: 15) {
-            
             Image("search")
                 .resizable()
                 .scaledToFit()

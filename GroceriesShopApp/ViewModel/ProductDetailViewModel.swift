@@ -16,7 +16,6 @@ class ProductDetailViewModel: ObservableObject
     @Published var nutritionArr: [NutritionModel] = []
     @Published var imageArr: [ImageModel] = []
     
-    
     @Published var isFav: Bool = false
     @Published var isShowDetail: Bool = false
     @Published var isShowNutrition: Bool = false
@@ -52,29 +51,19 @@ class ProductDetailViewModel: ObservableObject
     }
     
     //MARK: ServiceCall
-    
     func serviceCallDetail(){
         ServiceCall.post(parameter: ["prod_id": self.pObj.prodId ], path: Globs.SV_PRODUCT_DETAIL, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
-                    
                     if let payloadObj = response.value(forKey: KKey.payload) as? NSDictionary {
-                        
-                        
                         self.pObj = ProductModel(dict: payloadObj)
-                        
                         self.nutritionArr = (payloadObj.value(forKey: "nutrition_list") as? NSArray ?? []).map({ obj in
-                            
                             return NutritionModel(dict: obj as? NSDictionary ?? [:])
                         })
-                        
                         self.imageArr = (payloadObj.value(forKey: "images") as? NSArray ?? []).map({ obj in
-                            
                             return ImageModel(dict: obj as? NSDictionary ?? [:])
                         })
                     }
-                    
-                    
                 }else{
                     self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Fail"
                     self.showError = true

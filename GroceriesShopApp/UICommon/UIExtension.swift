@@ -15,14 +15,12 @@ enum Gilroy: String {
 }
 
 extension Font {
-    
     static func customfont(_ font: Gilroy, fontSize: CGFloat) -> Font {
         custom(font.rawValue, size: fontSize)
     }
 }
 
 extension CGFloat {
-    
     static var screenWidth: Double {
         return UIScreen.main.bounds.size.width
     }
@@ -70,7 +68,6 @@ extension CGFloat {
 }
 
 extension Color {
-    
     static var primaryApp: Color {
         return Color(hex: "53B175")
     }

@@ -41,7 +41,6 @@ struct MainTabView: View {
                             }
                         }
                     }
-                    
                     TabButton(title: "Favourite", icon: "fav_tab", isSelect: homeVM.selectTab == 3) {
                         DispatchQueue.main.async {
                             withAnimation {
@@ -49,7 +48,6 @@ struct MainTabView: View {
                             }
                         }
                     }
-                    
                     TabButton(title: "Account", icon: "account_tab", isSelect: homeVM.selectTab == 4) {
                         DispatchQueue.main.async {
                             withAnimation {

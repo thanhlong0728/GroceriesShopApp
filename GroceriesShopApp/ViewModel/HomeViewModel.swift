@@ -13,8 +13,6 @@ class HomeViewModel: ObservableObject
     
     @Published var selectTab: Int = 0
     @Published var txtSearch: String = ""
-    
-    
     @Published var showError = false
     @Published var errorMessage = ""
     
@@ -22,7 +20,6 @@ class HomeViewModel: ObservableObject
     @Published var bestArr: [ProductModel] = []
     @Published var listArr: [ProductModel] = []
     @Published var typeArr: [TypeModel] = []
-    
     
     init() {
         serviceCallList()
@@ -41,19 +38,15 @@ class HomeViewModel: ObservableObject
                             
                             return ProductModel(dict: obj as? NSDictionary ?? [:])
                         })
-                        
                         self.listArr = (payloadObj.value(forKey: "list") as? NSArray ?? []).map({ obj in
                             
                             return ProductModel(dict: obj as? NSDictionary ?? [:])
                         })
-                        
                         self.typeArr = (payloadObj.value(forKey: "type_list") as? NSArray ?? []).map({ obj in
                             
                             return TypeModel(dict: obj as? NSDictionary ?? [:])
                         })
                     }
-                    
-                    
                 }else{
                     self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Fail"
                     self.showError = true

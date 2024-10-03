@@ -8,12 +8,9 @@
 import SwiftUI
 
 struct NutritionModel: Identifiable, Equatable {
-    
     var id: Int = 0
     var nutritionName: String = ""
     var nutritionValue: String = ""
-    
-    
     
     init(dict: NSDictionary) {
         self.id = dict.value(forKey: "nutrition_id") as? Int ?? 0

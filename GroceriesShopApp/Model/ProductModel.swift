@@ -32,7 +32,6 @@ struct ProductModel:  Identifiable, Equatable {
     var isFav: Bool = false
     var avgRating: Int = 0
     
-
     init(dict: NSDictionary) {
         self.id = dict.value(forKey: "prod_id") as? Int ?? 0
         self.prodId = dict.value(forKey: "prod_id") as? Int ?? 0
@@ -42,7 +41,6 @@ struct ProductModel:  Identifiable, Equatable {
         self.orderId = dict.value(forKey: "order_id") as? Int ?? 0
         self.qty = dict.value(forKey: "qty") as? Int ?? 0
         self.isFav = dict.value(forKey: "is_fav") as? Int ?? 0 == 1
-        
         self.detail = dict.value(forKey: "detail") as? String ?? ""
         self.name = dict.value(forKey: "name") as? String ?? ""
         self.unitName = dict.value(forKey: "unit_name") as? String ?? ""

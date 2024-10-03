@@ -8,7 +8,6 @@
 import Foundation
 
 struct UserModel: Identifiable, Equatable {
-    
     var id: Int = 0
     var username: String = ""
     var name: String = ""
@@ -16,7 +15,6 @@ struct UserModel: Identifiable, Equatable {
     var mobile: String = ""
     var mobileCode: String = ""
     var authToken: String = ""
-    
     
     init(dict: NSDictionary) {
         self.id = dict.value(forKey: "user_id") as? Int ?? 0

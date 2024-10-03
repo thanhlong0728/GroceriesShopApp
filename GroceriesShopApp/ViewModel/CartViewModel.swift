@@ -11,7 +11,6 @@ class CartViewModel: ObservableObject
 {
     static var shared: CartViewModel = CartViewModel()
     
-    
     @Published var showError = false
     @Published var showOrderAccept = false
     @Published var errorMessage = ""
@@ -31,11 +30,6 @@ class CartViewModel: ObservableObject
     @Published var deliverPriceAmount: String = ""
     @Published var discountAmount: String = ""
     @Published var userPayAmount: String = ""
-    
-    
-
-    
-    
 
 }
 
