@@ -18,13 +18,11 @@ struct HomeView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 25)
-                    
                     HStack{
                         Image("location")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 16, height: 16 )
-                        
                         Text("Dhaka, Banassre")
                             .font(.customfont(.semibold, fontSize: 18))
                             .foregroundColor(.darkGray)
@@ -43,12 +41,10 @@ struct HomeView: View {
                 SectionTitleAll(title: "Exclusive offer", titleAll: "See All") {
                 }
                 .padding(.horizontal, 20)
-                
                 ScrollView(.horizontal, showsIndicators: false ) {
                     LazyHStack(spacing: 15) {
                         ForEach (homeVM.offerArr, id: \.id) {
                             pObj in
-                            
                             ProductCell(pObj: pObj, didAddCart: {
                                 
                             })
@@ -57,7 +53,6 @@ struct HomeView: View {
                     .padding(.horizontal, 20)
                     .padding(.vertical, 4)
                 }
-                
                 SectionTitleAll(title: "Best Selling", titleAll: "See All") {
                 }
                 .padding(.horizontal, 20)
@@ -65,7 +60,6 @@ struct HomeView: View {
                     LazyHStack(spacing: 15) {
                         ForEach (homeVM.bestArr, id: \.id) {
                             pObj in
-                            
                             ProductCell(pObj: pObj, didAddCart: {
                                
                             })
@@ -77,12 +71,10 @@ struct HomeView: View {
                 SectionTitleAll(title: "Groceries", titleAll: "See All") {
                 }
                 .padding(.horizontal, 20)
-               
                 ScrollView(.horizontal, showsIndicators: false ) {
                     LazyHStack(spacing: 15) {
                         ForEach (homeVM.listArr, id: \.id) {
                             pObj in
-                            
                             ProductCell(pObj: pObj, didAddCart: {
                                
                             })
@@ -92,7 +84,6 @@ struct HomeView: View {
                     .padding(.vertical, 4)
                 }
                 .padding(.bottom, .bottomInsets + 60)
-                
             }
         }
         .alert(isPresented: $homeVM.showError, content: {
