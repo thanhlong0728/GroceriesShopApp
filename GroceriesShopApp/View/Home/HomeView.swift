@@ -29,7 +29,6 @@ struct HomeView: View {
                             .font(.customfont(.semibold, fontSize: 18))
                             .foregroundColor(.darkGray)
                     }
-                    
                     SearchTextField(placholder: "Search Store", txt: $homeVM.txtSearch)
                         .padding(.horizontal, 20)
                         .padding(.vertical, 10)
@@ -40,28 +39,71 @@ struct HomeView: View {
                     .scaledToFill()
                     .frame(height: 115)
                     .padding(.horizontal, 20)
+                
                 SectionTitleAll(title: "Exclusive offer", titleAll: "See All") {
-                    
                 }
                 .padding(.horizontal, 20)
+                
                 ScrollView(.horizontal, showsIndicators: false ) {
                     LazyHStack(spacing: 15) {
                         ForEach (homeVM.offerArr, id: \.id) {
                             pObj in
                             
                             ProductCell(pObj: pObj, didAddCart: {
-                            
+                                
                             })
                         }
                     }
                     .padding(.horizontal, 20)
                     .padding(.vertical, 4)
                 }
+                
+                SectionTitleAll(title: "Best Selling", titleAll: "See All") {
+                }
+                .padding(.horizontal, 20)
+                ScrollView(.horizontal, showsIndicators: false ) {
+                    LazyHStack(spacing: 15) {
+                        ForEach (homeVM.bestArr, id: \.id) {
+                            pObj in
+                            
+                            ProductCell(pObj: pObj, didAddCart: {
+                               
+                            })
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 4)
+                }
+                SectionTitleAll(title: "Groceries", titleAll: "See All") {
+                }
+                .padding(.horizontal, 20)
+               
+                ScrollView(.horizontal, showsIndicators: false ) {
+                    LazyHStack(spacing: 15) {
+                        ForEach (homeVM.listArr, id: \.id) {
+                            pObj in
+                            
+                            ProductCell(pObj: pObj, didAddCart: {
+                               
+                            })
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 4)
+                }
+                .padding(.bottom, .bottomInsets + 60)
+                
             }
         }
+        .alert(isPresented: $homeVM.showError, content: {
+            Alert(title: Text(Globs.AppName), message: Text(homeVM.errorMessage), dismissButton: .default(Text("OK")) )
+        })
+        .ignoresSafeArea()
     }
 }
 
 #Preview {
-    HomeView()
+    NavigationView {
+        HomeView()
+    }
 }
