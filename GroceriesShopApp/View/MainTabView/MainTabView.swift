@@ -15,6 +15,14 @@ struct MainTabView: View {
         ZStack{
             if(homeVM.selectTab == 0) {
                 HomeView()
+            }else if(homeVM.selectTab == 1) {
+                
+            }else if(homeVM.selectTab == 2) {
+               
+            }else if(homeVM.selectTab == 3) {
+                FavouriteView()
+            }else if(homeVM.selectTab == 4) {
+             
             }
             VStack{
                 Spacer()

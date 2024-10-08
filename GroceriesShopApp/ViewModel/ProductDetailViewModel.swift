@@ -74,4 +74,25 @@ class ProductDetailViewModel: ObservableObject
             self.showError = true
         }
     }
+    
+    func serviceCallAddRemoveFav(){
+        ServiceCall.post(parameter: ["prod_id": self.pObj.prodId ], path: Globs.SV_ADD_REMOVE_FAVORITE, isToken: true ) { responseObj in
+            if let response = responseObj as? NSDictionary {
+                if response.value(forKey: KKey.status) as? String ?? "" == "1" {
+                    
+                    self.isFav = !self.isFav
+                    HomeViewModel.shared.serviceCallList()
+                    
+                    self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Done"
+                    self.showError = true
+                }else{
+                    self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Fail"
+                    self.showError = true
+                }
+            }
+        } failure: { error in
+            self.errorMessage = error?.localizedDescription ?? "Fail"
+            self.showError = true
+        }
+    }
 }
