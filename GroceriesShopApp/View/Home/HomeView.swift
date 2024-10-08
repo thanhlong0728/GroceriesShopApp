@@ -23,6 +23,7 @@ struct HomeView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 16, height: 16 )
+                        
                         Text("Dhaka, Banassre")
                             .font(.customfont(.semibold, fontSize: 18))
                             .foregroundColor(.darkGray)
@@ -39,11 +40,64 @@ struct HomeView: View {
                     .padding(.horizontal, 20)
                 
                 SectionTitleAll(title: "Exclusive offer", titleAll: "See All") {
+                    
                 }
                 .padding(.horizontal, 20)
+                
                 ScrollView(.horizontal, showsIndicators: false ) {
                     LazyHStack(spacing: 15) {
                         ForEach (homeVM.offerArr, id: \.id) {
+                            pObj in
+                            ProductCell(pObj: pObj, didAddCart: {
+                            })
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 4)
+                }
+                
+                
+                SectionTitleAll(title: "Best Selling", titleAll: "See All") {
+                    
+                }
+                .padding(.horizontal, 20)
+                
+                ScrollView(.horizontal, showsIndicators: false ) {
+                    LazyHStack(spacing: 15) {
+                        ForEach (homeVM.bestArr, id: \.id) {
+                            pObj in
+                            ProductCell(pObj: pObj, didAddCart: {
+
+                            })
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 4)
+                }
+                
+                SectionTitleAll(title: "Groceries", titleAll: "See All") {
+                    
+                }
+                .padding(.horizontal, 20)
+                
+                ScrollView(.horizontal, showsIndicators: false ) {
+                    LazyHStack(spacing: 15) {
+                        ForEach (homeVM.typeArr, id: \.id) {
+                            tObj in
+                            CategoryCell(tObj: tObj) {
+                                
+                            }
+                        }
+                    
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 4)
+                }
+                .padding(.bottom, 8)
+                
+                ScrollView(.horizontal, showsIndicators: false ) {
+                    LazyHStack(spacing: 15) {
+                        ForEach (homeVM.listArr, id: \.id) {
                             pObj in
                             ProductCell(pObj: pObj, didAddCart: {
                                 
@@ -53,37 +107,8 @@ struct HomeView: View {
                     .padding(.horizontal, 20)
                     .padding(.vertical, 4)
                 }
-                SectionTitleAll(title: "Best Selling", titleAll: "See All") {
-                }
-                .padding(.horizontal, 20)
-                ScrollView(.horizontal, showsIndicators: false ) {
-                    LazyHStack(spacing: 15) {
-                        ForEach (homeVM.bestArr, id: \.id) {
-                            pObj in
-                            ProductCell(pObj: pObj, didAddCart: {
-                               
-                            })
-                        }
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 4)
-                }
-                SectionTitleAll(title: "Groceries", titleAll: "See All") {
-                }
-                .padding(.horizontal, 20)
-                ScrollView(.horizontal, showsIndicators: false ) {
-                    LazyHStack(spacing: 15) {
-                        ForEach (homeVM.listArr, id: \.id) {
-                            pObj in
-                            ProductCell(pObj: pObj, didAddCart: {
-                               
-                            })
-                        }
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 4)
-                }
                 .padding(.bottom, .bottomInsets + 60)
+                
             }
         }
         .alert(isPresented: $homeVM.showError, content: {
@@ -92,6 +117,7 @@ struct HomeView: View {
         .ignoresSafeArea()
     }
 }
+
 
 #Preview {
     NavigationView {

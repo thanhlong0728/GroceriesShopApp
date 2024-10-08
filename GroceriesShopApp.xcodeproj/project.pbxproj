@@ -20,6 +20,7 @@
 		041BA49F2CAD46F100C47A7D /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BA49E2CAD46F100C47A7D /* CartViewModel.swift */; };
 		041BA4A12CAD478E00C47A7D /* CartItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BA4A02CAD478D00C47A7D /* CartItemModel.swift */; };
 		041BA4A32CAD498C00C47A7D /* TypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BA4A22CAD498C00C47A7D /* TypeModel.swift */; };
+		041E99442CB5319600614161 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E99432CB5319600614161 /* CategoryCell.swift */; };
 		044478332CAB8D5A00B85009 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044478322CAB8D5A00B85009 /* MainViewModel.swift */; };
 		044478352CAB928C00B85009 /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044478342CAB928C00B85009 /* LineTextField.swift */; };
 		044478372CABA47B00B85009 /* ServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044478362CABA47B00B85009 /* ServiceCall.swift */; };
@@ -81,6 +82,7 @@
 		041BA49E2CAD46F100C47A7D /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		041BA4A02CAD478D00C47A7D /* CartItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemModel.swift; sourceTree = "<group>"; };
 		041BA4A22CAD498C00C47A7D /* TypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeModel.swift; sourceTree = "<group>"; };
+		041E99432CB5319600614161 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		044478322CAB8D5A00B85009 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		044478342CAB928C00B85009 /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
 		044478362CABA47B00B85009 /* ServiceCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCall.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 				041BA48B2CAD41BC00C47A7D /* SearchTextField.swift */,
 				041BA48D2CAD42D600C47A7D /* SectionTitleAll.swift */,
 				041BA48F2CAD439000C47A7D /* ProductCell.swift */,
+				041E99432CB5319600614161 /* CategoryCell.swift */,
 			);
 			path = UICommon;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				041BA4902CAD439000C47A7D /* ProductCell.swift in Sources */,
 				044478352CAB928C00B85009 /* LineTextField.swift in Sources */,
 				04F89E822CA565D400C14C5F /* LoginView.swift in Sources */,
+				041E99442CB5319600614161 /* CategoryCell.swift in Sources */,
 				044C70CE2CABF85F00CA470A /* HomeViewModel.swift in Sources */,
 				044478392CABB02100B85009 /* Globs.swift in Sources */,
 				044C70D12CABFC9300CA470A /* HomeView.swift in Sources */,

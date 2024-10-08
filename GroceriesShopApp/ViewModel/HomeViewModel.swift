@@ -31,6 +31,7 @@ class HomeViewModel: ObservableObject
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     if let payloadObj = response.value(forKey: KKey.payload) as? NSDictionary {
+                        print("payloadObj:::",payloadObj)
                         self.offerArr = (payloadObj.value(forKey: "offer_list") as? NSArray ?? []).map({ obj in
                             return ProductModel(dict: obj as? NSDictionary ?? [:])
                         })
