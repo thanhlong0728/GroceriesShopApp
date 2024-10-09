@@ -16,7 +16,7 @@ struct MainTabView: View {
             if(homeVM.selectTab == 0) {
                 HomeView()
             }else if(homeVM.selectTab == 1) {
-                
+                ExploreView()
             }else if(homeVM.selectTab == 2) {
                
             }else if(homeVM.selectTab == 3) {
