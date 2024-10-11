@@ -20,19 +20,14 @@ struct ExploreItemsView: View {
     var body: some View {
         ZStack{
             VStack {
-                
                 HStack{
-                    
                     EmptyView()
                         .frame(width: 40, height: 40)
-                    
                     Spacer()
-                    
                     Text("Category")
                         .font(.customfont(.bold, fontSize: 20))
                         .frame(height: 46)
                     Spacer()
-                    
                     Button(action: {
                         
                     }, label: {
@@ -42,22 +37,16 @@ struct ExploreItemsView: View {
                             .frame(width: 20, height: 20)
                     })
                     .frame(width: 40, height: 40)
-                    
                 }
                 .padding(.top, .topInsets)
                 .padding(.horizontal, 20)
-                
-                
-                
                 ScrollView {
                     LazyVGrid(columns: columns,  spacing:15) {
-                         
                         ForEach(itemsVM.listArr, id: \.id) {
                             pObj in
                             ProductCell( pObj: pObj, width: .infinity ) {
                                
                             }
-                            
                         }
                     }
                     .padding(.vertical, 10)
