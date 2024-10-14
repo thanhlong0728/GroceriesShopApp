@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MainTabView: View {
-    
     @StateObject var homeVM = HomeViewModel.shared
     
     var body: some View {
@@ -18,12 +17,13 @@ struct MainTabView: View {
             }else if(homeVM.selectTab == 1) {
                 ExploreView()
             }else if(homeVM.selectTab == 2) {
-               
+                MyCartView()
             }else if(homeVM.selectTab == 3) {
                 FavouriteView()
             }else if(homeVM.selectTab == 4) {
              
             }
+            
             VStack{
                 Spacer()
                 HStack{

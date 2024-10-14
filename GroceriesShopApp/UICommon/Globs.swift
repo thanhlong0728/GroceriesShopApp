@@ -16,7 +16,6 @@ struct Globs {
     
     static let userPayload = "user_payload"
     static let userLogin = "user_login"
-    
     static let SV_LOGIN = BASE_URL + "login"
     static let SV_SIGN_UP = BASE_URL + "sign_up"
     static let SV_HOME = BASE_URL + "home"
@@ -25,6 +24,11 @@ struct Globs {
     static let SV_FAVORITE_LIST = BASE_URL + "favorite_list"
     static let SV_EXPLORE_LIST = BASE_URL + "explore_category_list"
     static let SV_EXPLORE_ITEMS_LIST = BASE_URL + "explore_category_items_list"
+    static let SV_ADD_CART = BASE_URL + "add_to_cart"
+    static let SV_UPDATE_CART = BASE_URL + "update_cart"
+    static let SV_REMOVE_CART = BASE_URL + "remove_cart"
+    static let SV_CART_LIST = BASE_URL + "cart_list"
+    static let SV_ORDER_PLACE = BASE_URL + "order_place"
 }
 
 struct KKey {

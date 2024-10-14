@@ -40,6 +40,13 @@
 		04C34E3A2CB68625000B0719 /* ExploreItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C34E392CB68625000B0719 /* ExploreItemViewModel.swift */; };
 		04C34E3C2CB68787000B0719 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C34E3B2CB68787000B0719 /* ExploreViewModel.swift */; };
 		04C34E3E2CB687C6000B0719 /* ExploreCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C34E3D2CB687C6000B0719 /* ExploreCategoryCell.swift */; };
+		04EE48112CBCF7F6007CA5F5 /* MyCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE48102CBCF7F6007CA5F5 /* MyCartView.swift */; };
+		04EE48132CBCF829007CA5F5 /* CartItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE48122CBCF829007CA5F5 /* CartItemRow.swift */; };
+		04EE48152CBCF8D3007CA5F5 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE48142CBCF8D3007CA5F5 /* AddressModel.swift */; };
+		04EE48172CBCF8F8007CA5F5 /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE48162CBCF8F8007CA5F5 /* PaymentModel.swift */; };
+		04EE48192CBCF91E007CA5F5 /* PromoCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE48182CBCF91E007CA5F5 /* PromoCodeModel.swift */; };
+		04EE481B2CBCF991007CA5F5 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE481A2CBCF991007CA5F5 /* CheckoutView.swift */; };
+		04EE481D2CBCFA06007CA5F5 /* OrderAccpetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE481C2CBCFA06007CA5F5 /* OrderAccpetView.swift */; };
 		04F89E3A2CA519F400C14C5F /* GroceriesShopAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F89E392CA519F400C14C5F /* GroceriesShopAppApp.swift */; };
 		04F89E3E2CA519F600C14C5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F89E3D2CA519F600C14C5F /* Assets.xcassets */; };
 		04F89E412CA519F600C14C5F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F89E402CA519F600C14C5F /* Preview Assets.xcassets */; };
@@ -110,6 +117,13 @@
 		04C34E392CB68625000B0719 /* ExploreItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreItemViewModel.swift; sourceTree = "<group>"; };
 		04C34E3B2CB68787000B0719 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		04C34E3D2CB687C6000B0719 /* ExploreCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCategoryCell.swift; sourceTree = "<group>"; };
+		04EE48102CBCF7F6007CA5F5 /* MyCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartView.swift; sourceTree = "<group>"; };
+		04EE48122CBCF829007CA5F5 /* CartItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemRow.swift; sourceTree = "<group>"; };
+		04EE48142CBCF8D3007CA5F5 /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
+		04EE48162CBCF8F8007CA5F5 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
+		04EE48182CBCF91E007CA5F5 /* PromoCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCodeModel.swift; sourceTree = "<group>"; };
+		04EE481A2CBCF991007CA5F5 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		04EE481C2CBCFA06007CA5F5 /* OrderAccpetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderAccpetView.swift; sourceTree = "<group>"; };
 		04F89E362CA519F400C14C5F /* GroceriesShopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceriesShopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F89E392CA519F400C14C5F /* GroceriesShopAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesShopAppApp.swift; sourceTree = "<group>"; };
 		04F89E3D2CA519F600C14C5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -202,6 +216,16 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		04EE480F2CBCF7DC007CA5F5 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				04EE48102CBCF7F6007CA5F5 /* MyCartView.swift */,
+				04EE481A2CBCF991007CA5F5 /* CheckoutView.swift */,
+				04EE481C2CBCFA06007CA5F5 /* OrderAccpetView.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
 		04F89E2D2CA519F400C14C5F = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +303,7 @@
 		04F89E6D2CA5330200C14C5F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04EE480F2CBCF7DC007CA5F5 /* Cart */,
 				041E99452CB535F200614161 /* Favourite */,
 				041BA4882CAD3A3F00C47A7D /* Explore */,
 				044C70CF2CABFC8600CA470A /* Home */,
@@ -297,6 +322,9 @@
 				041BA4A02CAD478D00C47A7D /* CartItemModel.swift */,
 				041BA4A22CAD498C00C47A7D /* TypeModel.swift */,
 				04C34E372CB68555000B0719 /* ExploreCategoryModel.swift */,
+				04EE48142CBCF8D3007CA5F5 /* AddressModel.swift */,
+				04EE48162CBCF8F8007CA5F5 /* PaymentModel.swift */,
+				04EE48182CBCF91E007CA5F5 /* PromoCodeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -332,6 +360,7 @@
 				041E99432CB5319600614161 /* CategoryCell.swift */,
 				041E994A2CB536F100614161 /* FavouriteRow.swift */,
 				04C34E3D2CB687C6000B0719 /* ExploreCategoryCell.swift */,
+				04EE48122CBCF829007CA5F5 /* CartItemRow.swift */,
 			);
 			path = UICommon;
 			sourceTree = "<group>";
@@ -496,15 +525,19 @@
 				04C34E382CB68555000B0719 /* ExploreCategoryModel.swift in Sources */,
 				044478352CAB928C00B85009 /* LineTextField.swift in Sources */,
 				04F89E822CA565D400C14C5F /* LoginView.swift in Sources */,
+				04EE48112CBCF7F6007CA5F5 /* MyCartView.swift in Sources */,
 				041E99442CB5319600614161 /* CategoryCell.swift in Sources */,
 				044C70CE2CABF85F00CA470A /* HomeViewModel.swift in Sources */,
+				04EE481D2CBCFA06007CA5F5 /* OrderAccpetView.swift in Sources */,
 				044478392CABB02100B85009 /* Globs.swift in Sources */,
 				044C70D12CABFC9300CA470A /* HomeView.swift in Sources */,
 				04F89E792CA5417C00C14C5F /* RoundButton.swift in Sources */,
 				04F89E3A2CA519F400C14C5F /* GroceriesShopAppApp.swift in Sources */,
 				0444783C2CABB55D00B85009 /* UIKitExtension.swift in Sources */,
+				04EE48132CBCF829007CA5F5 /* CartItemRow.swift in Sources */,
 				044C70D32CABFD0000CA470A /* TabButton.swift in Sources */,
 				04F89E772CA5388600C14C5F /* UIExtension.swift in Sources */,
+				04EE481B2CBCF991007CA5F5 /* CheckoutView.swift in Sources */,
 				044C70C92CABE72A00CA470A /* UserModel.swift in Sources */,
 				04F89E732CA533E000C14C5F /* WelcomeView.swift in Sources */,
 				04C34E3E2CB687C6000B0719 /* ExploreCategoryCell.swift in Sources */,
@@ -514,7 +547,9 @@
 				041BA49F2CAD46F100C47A7D /* CartViewModel.swift in Sources */,
 				041BA4A32CAD498C00C47A7D /* TypeModel.swift in Sources */,
 				041BA49B2CAD456C00C47A7D /* NutritionModel.swift in Sources */,
+				04EE48152CBCF8D3007CA5F5 /* AddressModel.swift in Sources */,
 				04C34E3A2CB68625000B0719 /* ExploreItemViewModel.swift in Sources */,
+				04EE48172CBCF8F8007CA5F5 /* PaymentModel.swift in Sources */,
 				041E99492CB5367C00614161 /* FavouriteViewModel.swift in Sources */,
 				041BA48E2CAD42D600C47A7D /* SectionTitleAll.swift in Sources */,
 				041BA4972CAD44C700C47A7D /* ProductDetailView.swift in Sources */,
@@ -526,6 +561,7 @@
 				041BA4A12CAD478E00C47A7D /* CartItemModel.swift in Sources */,
 				041BA48A2CAD3A5E00C47A7D /* ExploreView.swift in Sources */,
 				041BA4992CAD452A00C47A7D /* ProductDetailViewModel.swift in Sources */,
+				04EE48192CBCF91E007CA5F5 /* PromoCodeModel.swift in Sources */,
 				041E99472CB5364600614161 /* FavouriteView.swift in Sources */,
 				04C34E3C2CB68787000B0719 /* ExploreViewModel.swift in Sources */,
 				044C70CC2CABEA7000CA470A /* MainTabView.swift in Sources */,
