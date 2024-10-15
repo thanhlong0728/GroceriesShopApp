@@ -19,4 +19,24 @@ extension String {
         dataFormat.dateFormat = format
         return dataFormat.date(from: self)
     }
+    
+    func stringDateChangeFormat(format: String, newFormat: String ) -> String {
+        let dataFormat = DateFormatter()
+        dataFormat.dateFormat = format
+        if let dt = dataFormat.date(from: self) {
+            dataFormat.dateFormat = newFormat
+            return dataFormat.string(from: dt)
+        }else{
+            return ""
+        }
+    }
+}
+
+extension Date {
+    func displayDate(format: String, addMinTime:  Int = 0) -> String {
+        let dataFormat = DateFormatter()
+        dataFormat.dateFormat = format
+        let date = self.addingTimeInterval(TimeInterval(60 * addMinTime))
+        return dataFormat.string(from: date)
+    }
 }

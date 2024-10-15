@@ -37,6 +37,8 @@ struct Globs {
     static let SV_UPDATE_ADDRESS = BASE_URL + "update_delivery_address"
     static let SV_REMOVE_ADDRESS = BASE_URL + "delete_delivery_address"
     static let SV_ADDRESS_LIST = BASE_URL + "delivery_address"
+    
+    static let SV_PROMO_CODE_LIST = BASE_URL + "promo_code_list"
 }
 
 struct KKey {

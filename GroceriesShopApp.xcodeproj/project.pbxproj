@@ -37,6 +37,8 @@
 		044C70D32CABFD0000CA470A /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044C70D22CABFD0000CA470A /* TabButton.swift */; };
 		049D6C632CBE0B1800C12089 /* DeliveryAddressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D6C622CBE0B1800C12089 /* DeliveryAddressViewModel.swift */; };
 		049D6C652CBE0C5700C12089 /* AddDeliveryAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D6C642CBE0C5700C12089 /* AddDeliveryAddressView.swift */; };
+		049D6C672CBE134C00C12089 /* PromoCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D6C662CBE134C00C12089 /* PromoCodeViewModel.swift */; };
+		049D6C692CBE142200C12089 /* PromoCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D6C682CBE142200C12089 /* PromoCodeView.swift */; };
 		04C34E362CB68519000B0719 /* ExploreItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C34E352CB68519000B0719 /* ExploreItemsView.swift */; };
 		04C34E382CB68555000B0719 /* ExploreCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C34E372CB68555000B0719 /* ExploreCategoryModel.swift */; };
 		04C34E3A2CB68625000B0719 /* ExploreItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C34E392CB68625000B0719 /* ExploreItemViewModel.swift */; };
@@ -119,6 +121,8 @@
 		044C70D22CABFD0000CA470A /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		049D6C622CBE0B1800C12089 /* DeliveryAddressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressViewModel.swift; sourceTree = "<group>"; };
 		049D6C642CBE0C5700C12089 /* AddDeliveryAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeliveryAddressView.swift; sourceTree = "<group>"; };
+		049D6C662CBE134C00C12089 /* PromoCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCodeViewModel.swift; sourceTree = "<group>"; };
+		049D6C682CBE142200C12089 /* PromoCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCodeView.swift; sourceTree = "<group>"; };
 		04C34E352CB68519000B0719 /* ExploreItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreItemsView.swift; sourceTree = "<group>"; };
 		04C34E372CB68555000B0719 /* ExploreCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCategoryModel.swift; sourceTree = "<group>"; };
 		04C34E392CB68625000B0719 /* ExploreItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreItemViewModel.swift; sourceTree = "<group>"; };
@@ -242,6 +246,7 @@
 				04EE481F2CBD08A0007CA5F5 /* AccountView.swift */,
 				04EE48232CBD1FF7007CA5F5 /* DelieryAddressView.swift */,
 				049D6C642CBE0C5700C12089 /* AddDeliveryAddressView.swift */,
+				049D6C682CBE142200C12089 /* PromoCodeView.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 				04C34E392CB68625000B0719 /* ExploreItemViewModel.swift */,
 				04C34E3B2CB68787000B0719 /* ExploreViewModel.swift */,
 				049D6C622CBE0B1800C12089 /* DeliveryAddressViewModel.swift */,
+				049D6C662CBE134C00C12089 /* PromoCodeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -577,6 +583,7 @@
 				041BA49B2CAD456C00C47A7D /* NutritionModel.swift in Sources */,
 				04EE48152CBCF8D3007CA5F5 /* AddressModel.swift in Sources */,
 				04C34E3A2CB68625000B0719 /* ExploreItemViewModel.swift in Sources */,
+				049D6C672CBE134C00C12089 /* PromoCodeViewModel.swift in Sources */,
 				04EE48172CBCF8F8007CA5F5 /* PaymentModel.swift in Sources */,
 				041E99492CB5367C00614161 /* FavouriteViewModel.swift in Sources */,
 				041BA48E2CAD42D600C47A7D /* SectionTitleAll.swift in Sources */,
@@ -584,6 +591,7 @@
 				041BA48C2CAD41BC00C47A7D /* SearchTextField.swift in Sources */,
 				041BA4952CAD445F00C47A7D /* ProductModel.swift in Sources */,
 				044C70C72CABDE8500CA470A /* SignupView.swift in Sources */,
+				049D6C692CBE142200C12089 /* PromoCodeView.swift in Sources */,
 				041BA49D2CAD45D700C47A7D /* ImageModel.swift in Sources */,
 				044478332CAB8D5A00B85009 /* MainViewModel.swift in Sources */,
 				041BA4A12CAD478E00C47A7D /* CartItemModel.swift in Sources */,

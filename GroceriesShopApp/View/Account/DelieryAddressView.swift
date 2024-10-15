@@ -17,7 +17,6 @@ struct DelieryAddressView: View {
     
     var body: some View {
         ZStack{
-            
             ScrollView{
                 LazyVStack(spacing: 15) {
                     ForEach( addressVM.listArr , id: \.id, content: {
