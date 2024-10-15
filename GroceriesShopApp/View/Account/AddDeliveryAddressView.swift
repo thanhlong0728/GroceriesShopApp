@@ -15,38 +15,28 @@ struct AddDeliveryAddressView: View {
     
     var body: some View {
         ZStack {
-            
             ScrollView{
                 VStack(spacing: 15){
-                    
                     HStack{
-                        
                         Button {
                             addressVM.txtTypeName = "Home"
                         } label: {
                             Image(systemName: addressVM.txtTypeName == "Home" ? "record.circle" : "circle"  )
-                                
                             Text("Home")
                                 .font(.customfont(.medium, fontSize: 16))
                                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         }
                         .foregroundColor(.primaryText)
-                        
                         Button {
                             addressVM.txtTypeName = "Office"
                         } label: {
                             Image(systemName: addressVM.txtTypeName == "Office" ? "record.circle" : "circle"  )
-                                
                             Text("Office")
                                 .font(.customfont(.medium, fontSize: 16))
                                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading )
                         }
                         .foregroundColor(.primaryText)
-                        
-                        
                     }
-                    
-                    
                     LineTextField(title: "Name", placeholder: "Enter you name" , txt: $addressVM.txtName)
                     
                     LineTextField(title: "Mobile", placeholder: "Enter you mobile number", txt: $addressVM.txtMobile, keyboardType: .numberPad)
@@ -57,8 +47,6 @@ struct AddDeliveryAddressView: View {
                         LineTextField(title: "City", placeholder: "Enter you city" , txt: $addressVM.txtCity)
                         LineTextField(title: "State", placeholder: "Enter you state" , txt: $addressVM.txtState)
                     }
-                   
-                    
                     LineTextField(title: "Postal Code", placeholder: "Enter you postal code" , txt: $addressVM.txtPostalCode)
                     
                     RoundButton(title: isEdit ? "Update Address" : "Add Address") {
@@ -76,13 +64,9 @@ struct AddDeliveryAddressView: View {
                 }
                 .padding(20)
                 .padding(.top, .topInsets + 46)
-
             }
-            
             VStack {
-                    
                 HStack{
-                    
                     Button {
                         mode.wrappedValue.dismiss()
                     } label: {
@@ -91,26 +75,17 @@ struct AddDeliveryAddressView: View {
                             .scaledToFit()
                             .frame(width: 20, height: 20)
                     }
-
-                    
-                   
                     Spacer()
-                    
                     Text( isEdit ? "Edit Delivery Address" : "Add Delivery Address")
                         .font(.customfont(.bold, fontSize: 20))
                         .frame(height: 46)
                     Spacer()
-                    
-                    
-
                 }
                 .padding(.top, .topInsets)
                 .padding(.horizontal, 20)
                 .background(Color.white)
                 .shadow(color: Color.black.opacity(0.2),  radius: 2 )
-                
                 Spacer()
-                
             }
         }
         .onAppear{
@@ -129,7 +104,6 @@ struct AddDeliveryAddressView: View {
         .ignoresSafeArea()
     }
 }
-
 
 #Preview {
     AddDeliveryAddressView()
