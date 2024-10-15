@@ -35,6 +35,8 @@
 		044C70CE2CABF85F00CA470A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044C70CD2CABF85F00CA470A /* HomeViewModel.swift */; };
 		044C70D12CABFC9300CA470A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044C70D02CABFC9300CA470A /* HomeView.swift */; };
 		044C70D32CABFD0000CA470A /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044C70D22CABFD0000CA470A /* TabButton.swift */; };
+		049D6C632CBE0B1800C12089 /* DeliveryAddressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D6C622CBE0B1800C12089 /* DeliveryAddressViewModel.swift */; };
+		049D6C652CBE0C5700C12089 /* AddDeliveryAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D6C642CBE0C5700C12089 /* AddDeliveryAddressView.swift */; };
 		04C34E362CB68519000B0719 /* ExploreItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C34E352CB68519000B0719 /* ExploreItemsView.swift */; };
 		04C34E382CB68555000B0719 /* ExploreCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C34E372CB68555000B0719 /* ExploreCategoryModel.swift */; };
 		04C34E3A2CB68625000B0719 /* ExploreItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C34E392CB68625000B0719 /* ExploreItemViewModel.swift */; };
@@ -49,6 +51,7 @@
 		04EE481D2CBCFA06007CA5F5 /* OrderAccpetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE481C2CBCFA06007CA5F5 /* OrderAccpetView.swift */; };
 		04EE48202CBD08A0007CA5F5 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE481F2CBD08A0007CA5F5 /* AccountView.swift */; };
 		04EE48222CBD1617007CA5F5 /* AccountRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE48212CBD1617007CA5F5 /* AccountRow.swift */; };
+		04EE48242CBD1FF7007CA5F5 /* DelieryAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE48232CBD1FF7007CA5F5 /* DelieryAddressView.swift */; };
 		04F89E3A2CA519F400C14C5F /* GroceriesShopAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F89E392CA519F400C14C5F /* GroceriesShopAppApp.swift */; };
 		04F89E3E2CA519F600C14C5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F89E3D2CA519F600C14C5F /* Assets.xcassets */; };
 		04F89E412CA519F600C14C5F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F89E402CA519F600C14C5F /* Preview Assets.xcassets */; };
@@ -114,6 +117,8 @@
 		044C70CD2CABF85F00CA470A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		044C70D02CABFC9300CA470A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		044C70D22CABFD0000CA470A /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		049D6C622CBE0B1800C12089 /* DeliveryAddressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressViewModel.swift; sourceTree = "<group>"; };
+		049D6C642CBE0C5700C12089 /* AddDeliveryAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeliveryAddressView.swift; sourceTree = "<group>"; };
 		04C34E352CB68519000B0719 /* ExploreItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreItemsView.swift; sourceTree = "<group>"; };
 		04C34E372CB68555000B0719 /* ExploreCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCategoryModel.swift; sourceTree = "<group>"; };
 		04C34E392CB68625000B0719 /* ExploreItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreItemViewModel.swift; sourceTree = "<group>"; };
@@ -128,6 +133,7 @@
 		04EE481C2CBCFA06007CA5F5 /* OrderAccpetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderAccpetView.swift; sourceTree = "<group>"; };
 		04EE481F2CBD08A0007CA5F5 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		04EE48212CBD1617007CA5F5 /* AccountRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRow.swift; sourceTree = "<group>"; };
+		04EE48232CBD1FF7007CA5F5 /* DelieryAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelieryAddressView.swift; sourceTree = "<group>"; };
 		04F89E362CA519F400C14C5F /* GroceriesShopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceriesShopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F89E392CA519F400C14C5F /* GroceriesShopAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesShopAppApp.swift; sourceTree = "<group>"; };
 		04F89E3D2CA519F600C14C5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -234,6 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				04EE481F2CBD08A0007CA5F5 /* AccountView.swift */,
+				04EE48232CBD1FF7007CA5F5 /* DelieryAddressView.swift */,
+				049D6C642CBE0C5700C12089 /* AddDeliveryAddressView.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -353,6 +361,7 @@
 				041E99482CB5367C00614161 /* FavouriteViewModel.swift */,
 				04C34E392CB68625000B0719 /* ExploreItemViewModel.swift */,
 				04C34E3B2CB68787000B0719 /* ExploreViewModel.swift */,
+				049D6C622CBE0B1800C12089 /* DeliveryAddressViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -542,11 +551,13 @@
 				04F89E822CA565D400C14C5F /* LoginView.swift in Sources */,
 				04EE48112CBCF7F6007CA5F5 /* MyCartView.swift in Sources */,
 				041E99442CB5319600614161 /* CategoryCell.swift in Sources */,
+				049D6C632CBE0B1800C12089 /* DeliveryAddressViewModel.swift in Sources */,
 				044C70CE2CABF85F00CA470A /* HomeViewModel.swift in Sources */,
 				04EE481D2CBCFA06007CA5F5 /* OrderAccpetView.swift in Sources */,
 				044478392CABB02100B85009 /* Globs.swift in Sources */,
 				044C70D12CABFC9300CA470A /* HomeView.swift in Sources */,
 				04F89E792CA5417C00C14C5F /* RoundButton.swift in Sources */,
+				04EE48242CBD1FF7007CA5F5 /* DelieryAddressView.swift in Sources */,
 				04F89E3A2CA519F400C14C5F /* GroceriesShopAppApp.swift in Sources */,
 				0444783C2CABB55D00B85009 /* UIKitExtension.swift in Sources */,
 				04EE48132CBCF829007CA5F5 /* CartItemRow.swift in Sources */,
@@ -557,6 +568,7 @@
 				04F89E732CA533E000C14C5F /* WelcomeView.swift in Sources */,
 				04EE48202CBD08A0007CA5F5 /* AccountView.swift in Sources */,
 				04C34E3E2CB687C6000B0719 /* ExploreCategoryCell.swift in Sources */,
+				049D6C652CBE0C5700C12089 /* AddDeliveryAddressView.swift in Sources */,
 				04C34E362CB68519000B0719 /* ExploreItemsView.swift in Sources */,
 				044478372CABA47B00B85009 /* ServiceCall.swift in Sources */,
 				04F89E7B2CA5430C00C14C5F /* SignInView.swift in Sources */,
