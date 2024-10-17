@@ -14,27 +14,25 @@ class ServiceCall{
             let dictKey = parameter.allKeys as! [String]
             
             var i=0;
-            
             for dictKey in dictKey {
                 if let values = parameter.value(forKey: dictKey) as? String{
                     parameterData.append(String.init(format: "%@%@=%@", i==0 ? "" : "&" ,dictKey, values.replacingOccurrences(of: "+", with: "%2B")).data(using: String.Encoding.utf8)!)
                 }else{
                     parameterData.append(String.init(format: "%@%@=%@", i==0 ? "" : "&" ,dictKey, parameter.value(forKey: dictKey) as! CVarArg) .data(using: String.Encoding.utf8)!)
                 }
-                
                 i += 1
             }
             
             var request = URLRequest(url: URL(string: path)!,timeoutInterval: 20)
             request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+            
+          
+            request.addValue( "Jgmho2egVdlDuLP71IeN" , forHTTPHeaderField: "access_token")
+         
+//            if(isToken) {
+//                request.addValue( MainViewModel.shared.userObj.authToken , forHTTPHeaderField: "access_token")
+//            }
 
-            if(isToken) {
-//              #if DEBUG
-//              request.addValue( "HFYsmcPickQlPmWMNUEZ" , forHTTPHeaderField: "access_token")
-//              #else
-                request.addValue( MainViewModel.shared.userObj.authToken , forHTTPHeaderField: "access_token")
-//              #endif
-            }
             request.httpMethod = "POST"
             request.httpBody = parameterData as Data
 
