@@ -48,7 +48,10 @@ struct CheckoutView: View {
                     Divider()
                     if(cartVM.deliveryType == 1) {
                         NavigationLink {
-                          
+                            DelieryAddressView(isPicker: true, didSelect: {
+                                aObj in
+                                cartVM.deliverObj = aObj
+                            } )
                         } label: {
                             HStack {
                                 Text("Delivery")
@@ -85,7 +88,10 @@ struct CheckoutView: View {
                     Divider()
                     if(cartVM.paymentType == 2) {
                         NavigationLink {
-                           
+                            PaymentMethodsView(isPicker: true, didSelect: {
+                                pObj in
+                                cartVM.paymentObj = pObj
+                            } )
                         } label: {
                             HStack {
                                 Text("Payment")
@@ -111,7 +117,10 @@ struct CheckoutView: View {
                         Divider()
                     }
                     NavigationLink {
-                      
+                        PromoCodeView(isPicker: true, didSelect: {
+                            pObj in
+                            cartVM.promoObj = pObj
+                        })
                     } label: {
                         HStack {
                             Text("Promo Code")
