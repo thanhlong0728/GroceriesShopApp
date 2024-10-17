@@ -27,27 +27,20 @@ struct MyOrderModel:  Identifiable, Equatable {
     var state: String = ""
     var postalCode: String = ""
     var images: [String] = []
-  
     var createdDate: Date = Date()
-    
 
     init(dict: NSDictionary) {
         self.id = dict.value(forKey: "order_id") as? Int ?? 0
-        
         self.cartId = dict.value(forKey: "cart_id") as? Int ?? 0
-        
         self.totalPrice = dict.value(forKey: "total_price") as? Double ?? 0.0
         self.userPayPrice = dict.value(forKey: "user_pay_price") as? Double ?? 0.0
         self.discountPrice = dict.value(forKey: "discount_price") as? Double ?? 0.0
         self.deliverPrice = dict.value(forKey: "deliver_price") as? Double ?? 0.0
-        
         self.deliverType = dict.value(forKey: "deliver_type") as? Int ?? 0
         self.paymentType = dict.value(forKey: "payment_type") as? Int ?? 0
         self.paymentStatus = dict.value(forKey: "payment_status") as? Int ?? 0
         self.orderStatus = dict.value(forKey: "order_status") as? Int ?? 0
         self.status = dict.value(forKey: "status") as? Int ?? 0
-        
-        
         self.names = dict.value(forKey: "names") as? String ?? ""
         self.userName = dict.value(forKey: "user_name") as? String ?? ""
         self.phone = dict.value(forKey: "phone") as? String ?? ""
@@ -55,7 +48,6 @@ struct MyOrderModel:  Identifiable, Equatable {
         self.city = dict.value(forKey: "city") as? String ?? ""
         self.state = dict.value(forKey: "state") as? String ?? ""
         self.postalCode = dict.value(forKey: "postal_code") as? String ?? ""
-        
         self.images = (dict.value(forKey: "images") as? String ?? "").components(separatedBy: ",")
         self.createdDate = (dict.value(forKey: "created_date") as? String ?? "").stringDateToDate() ?? Date()
     }

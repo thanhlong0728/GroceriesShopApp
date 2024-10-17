@@ -11,18 +11,13 @@ class PaymentViewModel: ObservableObject
 {
     static var shared: PaymentViewModel = PaymentViewModel()
     
-    
     @Published var txtName: String = ""
     @Published var txtCardNumber: String = ""
     @Published var txtCardMonth: String = ""
     @Published var txtCardYear: String = ""
-    
-    
     @Published var showError = false
     @Published var errorMessage = ""
-    
     @Published var listArr: [PaymentModel] = []
-    
     
     init() {
         serviceCallList()
@@ -36,19 +31,14 @@ class PaymentViewModel: ObservableObject
         
     }
     
-    
     //MARK: ServiceCall
-    
     func serviceCallList(){
         ServiceCall.post(parameter: [:], path: Globs.SV_PAYMENT_METHOD_LIST, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
-                    
-                    
                     self.listArr = (response.value(forKey: KKey.payload) as? NSArray ?? []).map({ obj in
                         return PaymentModel(dict: obj as? NSDictionary ?? [:])
                     })
-                
                 }else{
                     self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Fail"
                     self.showError = true
@@ -64,9 +54,7 @@ class PaymentViewModel: ObservableObject
         ServiceCall.post(parameter: ["pay_id": pObj.id ], path: Globs.SV_REMOVE_PAYMENT_METHOD, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
-                    
                     self.serviceCallList()
-                
                 }else{
                     self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Fail"
                     self.showError = true
