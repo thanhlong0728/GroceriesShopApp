@@ -38,6 +38,9 @@
 		04535F992CC0E9F4004E6B31 /* PaymentMethodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04535F982CC0E9F4004E6B31 /* PaymentMethodsView.swift */; };
 		04535F9B2CC0EA23004E6B31 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04535F9A2CC0EA23004E6B31 /* PaymentViewModel.swift */; };
 		04535F9D2CC0EA6D004E6B31 /* AddPaymentMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04535F9C2CC0EA6D004E6B31 /* AddPaymentMethodView.swift */; };
+		04535F9F2CC0F553004E6B31 /* MyOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04535F9E2CC0F553004E6B31 /* MyOrdersView.swift */; };
+		04535FA12CC0F592004E6B31 /* MyOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04535FA02CC0F592004E6B31 /* MyOrderModel.swift */; };
+		04535FA32CC0F5C3004E6B31 /* MyOrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04535FA22CC0F5C3004E6B31 /* MyOrdersViewModel.swift */; };
 		049D6C632CBE0B1800C12089 /* DeliveryAddressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D6C622CBE0B1800C12089 /* DeliveryAddressViewModel.swift */; };
 		049D6C652CBE0C5700C12089 /* AddDeliveryAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D6C642CBE0C5700C12089 /* AddDeliveryAddressView.swift */; };
 		049D6C672CBE134C00C12089 /* PromoCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D6C662CBE134C00C12089 /* PromoCodeViewModel.swift */; };
@@ -125,6 +128,9 @@
 		04535F982CC0E9F4004E6B31 /* PaymentMethodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsView.swift; sourceTree = "<group>"; };
 		04535F9A2CC0EA23004E6B31 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
 		04535F9C2CC0EA6D004E6B31 /* AddPaymentMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentMethodView.swift; sourceTree = "<group>"; };
+		04535F9E2CC0F553004E6B31 /* MyOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersView.swift; sourceTree = "<group>"; };
+		04535FA02CC0F592004E6B31 /* MyOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderModel.swift; sourceTree = "<group>"; };
+		04535FA22CC0F5C3004E6B31 /* MyOrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersViewModel.swift; sourceTree = "<group>"; };
 		049D6C622CBE0B1800C12089 /* DeliveryAddressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressViewModel.swift; sourceTree = "<group>"; };
 		049D6C642CBE0C5700C12089 /* AddDeliveryAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeliveryAddressView.swift; sourceTree = "<group>"; };
 		049D6C662CBE134C00C12089 /* PromoCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCodeViewModel.swift; sourceTree = "<group>"; };
@@ -255,6 +261,7 @@
 				049D6C682CBE142200C12089 /* PromoCodeView.swift */,
 				04535F982CC0E9F4004E6B31 /* PaymentMethodsView.swift */,
 				04535F9C2CC0EA6D004E6B31 /* AddPaymentMethodView.swift */,
+				04535F9E2CC0F553004E6B31 /* MyOrdersView.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -359,6 +366,7 @@
 				04EE48142CBCF8D3007CA5F5 /* AddressModel.swift */,
 				04EE48162CBCF8F8007CA5F5 /* PaymentModel.swift */,
 				04EE48182CBCF91E007CA5F5 /* PromoCodeModel.swift */,
+				04535FA02CC0F592004E6B31 /* MyOrderModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -377,6 +385,7 @@
 				049D6C622CBE0B1800C12089 /* DeliveryAddressViewModel.swift */,
 				049D6C662CBE134C00C12089 /* PromoCodeViewModel.swift */,
 				04535F9A2CC0EA23004E6B31 /* PaymentViewModel.swift */,
+				04535FA22CC0F5C3004E6B31 /* MyOrdersViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -588,10 +597,12 @@
 				049D6C652CBE0C5700C12089 /* AddDeliveryAddressView.swift in Sources */,
 				04C34E362CB68519000B0719 /* ExploreItemsView.swift in Sources */,
 				044478372CABA47B00B85009 /* ServiceCall.swift in Sources */,
+				04535FA32CC0F5C3004E6B31 /* MyOrdersViewModel.swift in Sources */,
 				04F89E7B2CA5430C00C14C5F /* SignInView.swift in Sources */,
 				04535F9D2CC0EA6D004E6B31 /* AddPaymentMethodView.swift in Sources */,
 				041BA49F2CAD46F100C47A7D /* CartViewModel.swift in Sources */,
 				041BA4A32CAD498C00C47A7D /* TypeModel.swift in Sources */,
+				04535F9F2CC0F553004E6B31 /* MyOrdersView.swift in Sources */,
 				041BA49B2CAD456C00C47A7D /* NutritionModel.swift in Sources */,
 				04EE48152CBCF8D3007CA5F5 /* AddressModel.swift in Sources */,
 				04C34E3A2CB68625000B0719 /* ExploreItemViewModel.swift in Sources */,
@@ -610,6 +621,7 @@
 				041BA48A2CAD3A5E00C47A7D /* ExploreView.swift in Sources */,
 				041BA4992CAD452A00C47A7D /* ProductDetailViewModel.swift in Sources */,
 				04EE48192CBCF91E007CA5F5 /* PromoCodeModel.swift in Sources */,
+				04535FA12CC0F592004E6B31 /* MyOrderModel.swift in Sources */,
 				041E99472CB5364600614161 /* FavouriteView.swift in Sources */,
 				04C34E3C2CB68787000B0719 /* ExploreViewModel.swift in Sources */,
 				044C70CC2CABEA7000CA470A /* MainTabView.swift in Sources */,

@@ -44,6 +44,9 @@ struct Globs {
     static let SV_REMOVE_PAYMENT_METHOD = BASE_URL + "remove_payment_method"
     static let SV_PAYMENT_METHOD_LIST = BASE_URL + "payment_method"
     
+    static let SV_MY_ORDERS_LIST = BASE_URL + "my_order"
+    static let SV_MY_ORDERS_DETAIL = BASE_URL + "my_order_detail"
+    
 }
 
 struct KKey {
