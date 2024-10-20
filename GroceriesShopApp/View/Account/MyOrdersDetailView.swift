@@ -150,9 +150,9 @@ struct MyOrdersDetailView: View {
         .alert(isPresented: $detailVM.showError, content: {
             Alert(title: Text(Globs.AppName), message: Text(detailVM.errorMessage)  , dismissButton: .default(Text("Ok"))  )
         })
-//        .background( NavigationLink(destination: WriteReviewView(), isActive: $showWriteReview, label: {
-//            EmptyView()
-//        }) )
+        .background( NavigationLink(destination: WriteReviewView(), isActive: $showWriteReview, label: {
+            EmptyView()
+        }) )
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)

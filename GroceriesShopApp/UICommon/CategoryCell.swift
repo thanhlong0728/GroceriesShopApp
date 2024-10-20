@@ -15,16 +15,12 @@ struct CategoryCell: View {
     
     var body: some View {
         HStack{
-            
             WebImage(url: URL(string: tObj.image ))
                 .resizable()
                 .indicator(.activity) // Activity Indicator
                 .transition(.fade(duration: 0.5))
                 .scaledToFit()
                 .frame(width: 70, height: 70)
-            
-        
-            
             Text(tObj.name)
                 .font(.customfont(.bold, fontSize: 16))
                 .foregroundColor(.primaryText)
