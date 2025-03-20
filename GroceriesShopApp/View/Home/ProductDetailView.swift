@@ -14,14 +14,12 @@ struct ProductDetailView: View {
     
     var body: some View {
         ZStack{
-            
             ScrollView {
                 ZStack{
                       Rectangle()
                         .foregroundColor( Color(hex: "F2F2F2") )
                         .frame(width: .screenWidth, height: .screenWidth * 0.8)
                         .cornerRadius(20, corner: [.bottomLeft, .bottomRight])
-                    
                     WebImage(url: URL(string: detailVM.pObj.image ))
                         .resizable()
                         .indicator(.activity) // Activity Indicator
@@ -30,7 +28,6 @@ struct ProductDetailView: View {
                         .frame(width: .screenWidth * 0.8, height: .screenWidth * 0.8)
                 }
                 .frame(width: .screenWidth, height: .screenWidth * 0.8)
-                
                 VStack{
                     HStack{
                         Text(detailVM.pObj.name)
@@ -47,15 +44,12 @@ struct ProductDetailView: View {
                                 .frame(width: 30, height: 30)
                         }
                         .foregroundColor(Color.secondaryText)
-
                     }
                     Text("\(detailVM.pObj.unitValue)\(detailVM.pObj.unitName), Price")
                         .font(.customfont(.semibold, fontSize: 16))
                         .foregroundColor(.secondaryText)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                    
                     HStack{
-                        
                         Button {
                             detailVM.addSubQTY(isAdd: false)
                         } label: {
@@ -66,7 +60,6 @@ struct ProductDetailView: View {
                                 .frame(width: 20, height: 20)
                                 .padding(10)
                         }
-                        
                         Text( "\(detailVM.qty)" )
                             .font(.customfont(.bold, fontSize: 24))
                             .foregroundColor(.primaryText)
@@ -87,7 +80,6 @@ struct ProductDetailView: View {
                                 .frame(width: 20, height: 20)
                                 .padding(10)
                         }
-                        
                         Spacer()
                         Text( "$\(  (detailVM.pObj.offerPrice ?? detailVM.pObj.price) * Double(detailVM.qty) , specifier: "%.2f")"  )
                             .font(.customfont(.bold, fontSize: 28))
@@ -95,7 +87,6 @@ struct ProductDetailView: View {
                             
                     }
                     .padding(.vertical, 8)
-                    
                     Divider()
                 }
                 .padding(.horizontal, 20)
@@ -111,19 +102,15 @@ struct ProductDetailView: View {
                             withAnimation {
                                 detailVM.showDetail()
                             }
-                            
                         } label: {
-                            
-                            Image( detailVM.isShowDetail ? "detail_open" : "next"  )
+                            Image( detailVM.isShowDetail ? "detail_open" : "detail_open"  )
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 15, height: 15)
                                 .padding(15)
                         }
                         .foregroundColor(Color.primaryText)
-
                     }
-                    
                     if(detailVM.isShowDetail) {
                         Text(detailVM.pObj.detail)
                             .font(.customfont(.medium, fontSize: 13))
@@ -131,8 +118,6 @@ struct ProductDetailView: View {
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .padding(.bottom , 8)
                     }
-                    
-                    
                     Divider()
                 }
                 .padding(.horizontal, 20)
@@ -143,8 +128,6 @@ struct ProductDetailView: View {
                             .font(.customfont(.semibold, fontSize: 16))
                             .foregroundColor(.primaryText)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                        
-                        
                         Text(detailVM.pObj.nutritionWeight)
                             .font(.customfont(.semibold, fontSize: 10))
                             .foregroundColor(.secondaryText)
@@ -156,7 +139,6 @@ struct ProductDetailView: View {
                             withAnimation {
                                 detailVM.showNutrition()
                             }
-                            
                         } label: {
                             
                             Image( detailVM.isShowNutrition ? "detail_open" : "next"  )
@@ -183,17 +165,12 @@ struct ProductDetailView: View {
                                         .font(.customfont(.semibold, fontSize: 15))
                                         .foregroundColor(.primaryText)
                                 }
-                                
                                 Divider()
                             }
                             .padding(.vertical, 0)
-                           
-                            
                         }
                         .padding(.horizontal, 10)
                     }
-                    
-                    
                     Divider()
                 }
                 .padding(.horizontal, 20)
@@ -212,15 +189,10 @@ struct ProductDetailView: View {
                                 .scaledToFit()
                                     .foregroundColor( Color.orange)
                                     .frame(width: 15, height: 15)
-                                
                         }
                     }
-                    
                     Button {
-                       
-                        
                     } label: {
-                        
                         Image( "next" )
                             .resizable()
                             .scaledToFit()
@@ -228,19 +200,21 @@ struct ProductDetailView: View {
                             .padding(15)
                     }
                     .foregroundColor(Color.primaryText)
-
                 }
                 .padding(.horizontal, 20)
-                
                 RoundButton(title: "Add To Basket") {
-                    
+                    CartViewModel.serviceCallAddToCart(prodId: detailVM.pObj.prodId, qty: detailVM.qty) { isDone, msg  in
+                        
+                        detailVM.qty = 1
+                        
+                        self.detailVM.errorMessage = msg
+                        self.detailVM.showError = true
+                    }
                 }
                 .padding( 20)
-                
             }
             
             VStack {
-                
                 HStack{
                     Button {
                         mode.wrappedValue.dismiss()
@@ -250,9 +224,7 @@ struct ProductDetailView: View {
                             .scaledToFit()
                             .frame(width: 25, height: 25)
                     }
-                    
                     Spacer()
-                    
                     Button {
                     } label: {
                         Image("share")
@@ -260,14 +232,11 @@ struct ProductDetailView: View {
                             .scaledToFit()
                             .frame(width: 25, height: 25)
                     }
-
                 }
-                
                 Spacer()
             }
             .padding(.top, .topInsets)
             .padding(.horizontal, 20)
-            
         }
         .alert(isPresented: $detailVM.showError, content: {
             
@@ -283,11 +252,10 @@ struct ProductDetailView: View {
 struct ProductDetailView_Previews: PreviewProvider {
     static var previews: some View {
         ProductDetailView(detailVM: ProductDetailViewModel(prodObj: ProductModel(dict: [
-            
                 "offer_price": 2.49,
                 "start_date": "2023-07-30T18:30:00.000Z",
                 "end_date": "2023-08-29T18:30:00.000Z",
-                "prod_id": 5,
+                "prod_id": 6,
                 "cat_id": 1,
                 "brand_id": 1,
                 "type_id": 1,

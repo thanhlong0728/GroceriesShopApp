@@ -61,7 +61,7 @@ struct SignupView: View {
                         }
                         .padding(.bottom, .screenWidth * 0.02)
                     }
-                    RoundButton(title: "Sing Up") {
+                    RoundButton(title: "Sign Up") {
                         mainVM.serviceCallSignUp()
                     }
                     .padding(.bottom, .screenWidth * 0.05)

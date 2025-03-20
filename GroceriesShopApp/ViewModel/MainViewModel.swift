@@ -53,9 +53,12 @@ class MainViewModel: ObservableObject {
             self.showError = true
             return
         }
-        
-        ServiceCall.post(parameter: ["email": txtEmail, "password": txtPassword, "dervice_token":"" ], path: Globs.SV_LOGIN) { responseObj in
+        print("email:: \(txtEmail)")
+        print(txtPassword)
+        print(Globs.SV_LOGIN)
+        ServiceCall.post(parameter: ["email": txtEmail, "password": txtPassword, "dervice_token":"123" ], path: Globs.SV_LOGIN) { responseObj in
             if let response = responseObj as? NSDictionary {
+                
                 print(response)
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     self.setUserData(uDict: response.value(forKey: KKey.payload) as? NSDictionary ?? [:])

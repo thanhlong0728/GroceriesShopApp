@@ -12,7 +12,7 @@ struct Globs {
     
     static let NotificationTitle = "Notification"
     
-    static let BASE_URL = "http://localhost:3001/api/app/"
+    static let BASE_URL = "http://192.168.41.7:3001/api/app/"
     
     static let userPayload = "user_payload"
     static let userLogin = "user_login"

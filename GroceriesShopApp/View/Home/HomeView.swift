@@ -12,12 +12,13 @@ struct HomeView: View {
     
     var body: some View {
         ZStack{
-            ScrollView{
+            ScrollView (showsIndicators: false) {
                 VStack{
                     Image("color_logo")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 25)
+                    
                     HStack{
                         Image("location")
                             .resizable()
@@ -31,13 +32,15 @@ struct HomeView: View {
                     SearchTextField(placholder: "Search Store", txt: $homeVM.txtSearch)
                         .padding(.horizontal, 20)
                         .padding(.vertical, 10)
+                  
                 }
                 .padding(.top, .topInsets )
                 Image("banner_top")
                     .resizable()
-                    .scaledToFill()
+//                        .scaledToFill()
                     .frame(height: 115)
                     .padding(.horizontal, 20)
+                   
                 SectionTitleAll(title: "Exclusive offer", titleAll: "See All") {
                     
                 }
@@ -109,7 +112,8 @@ struct HomeView: View {
                     .padding(.horizontal, 20)
                     .padding(.vertical, 4)
                 }
-                .padding(.bottom, .bottomInsets + 60)
+                .padding(.bottom, .bottomInsets + 120)
+                
             }
         }
         .alert(isPresented: $homeVM.showError, content: {

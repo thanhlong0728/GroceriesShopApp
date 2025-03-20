@@ -24,12 +24,16 @@ struct TabButton: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 25, height: 25)
+                    .accentColor(.red)
+//                    .tint(isSelect ? .primaryApp : .primaryText)
                 Text(title)
                     .font(.customfont(.semibold, fontSize: 14))
             }
         }
         .foregroundColor(isSelect ? .primaryApp : .primaryText )
         .frame(minWidth: 0, maxWidth: .infinity)
+        .padding(.bottom, 10)
+        
     }
 }
 

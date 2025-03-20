@@ -26,7 +26,7 @@ class ServiceCall{
             var request = URLRequest(url: URL(string: path)!,timeoutInterval: 20)
             request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
             
-            request.addValue( "Jgmho2egVdlDuLP71IeN" , forHTTPHeaderField: "access_token")
+            request.addValue( "ChRonUVMroE8926AzsOM" , forHTTPHeaderField: "access_token")
          
 //            if(isToken) {
 //                request.addValue( MainViewModel.shared.userObj.authToken , forHTTPHeaderField: "access_token")

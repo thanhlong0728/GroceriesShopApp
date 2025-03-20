@@ -17,7 +17,7 @@ class ProductDetailViewModel: ObservableObject
     @Published var imageArr: [ImageModel] = []
     
     @Published var isFav: Bool = false
-    @Published var isShowDetail: Bool = false
+    @Published var isShowDetail: Bool = true
     @Published var isShowNutrition: Bool = false
     @Published var qty: Int = 1
     
@@ -52,7 +52,7 @@ class ProductDetailViewModel: ObservableObject
     
     //MARK: ServiceCall
     func serviceCallDetail(){
-        ServiceCall.post(parameter: ["prod_id": self.pObj.prodId ], path: Globs.SV_PRODUCT_DETAIL, isToken: true ) { responseObj in
+        ServiceCall.post(parameter: ["prod_id": self.pObj.prodId ?? "6" ], path: Globs.SV_PRODUCT_DETAIL, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     if let payloadObj = response.value(forKey: KKey.payload) as? NSDictionary {
