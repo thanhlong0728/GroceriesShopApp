@@ -12,7 +12,7 @@ struct Globs {
     
     static let NotificationTitle = "Notification"
     
-    static let BASE_URL = "http://192.168.41.7:3001/api/app/"
+    static let BASE_URL = "http://192.168.41.8:3001/api/app/"
     
     static let userPayload = "user_payload"
     static let userLogin = "user_login"
@@ -46,6 +46,16 @@ struct Globs {
     
     static let SV_MY_ORDERS_LIST = BASE_URL + "my_order"
     static let SV_MY_ORDERS_DETAIL = BASE_URL + "my_order_detail"
+    
+    static let SV_NOTIFICATION_LIST = BASE_URL + "notification_list"
+    static let SV_NOTIFICATION_READ_ALL = BASE_URL + "notification_read_all"
+    
+    static let SV_UPDATE_PROFILE = BASE_URL + "update_profile"
+    static let SV_CHANGE_PASSWORD = BASE_URL + "change_password"
+    
+    static let SV_FORGOT_PASSWORD_REQUEST = BASE_URL + "forgot_password_request"
+    static let SV_FORGOT_PASSWORD_VERIFY = BASE_URL + "forgot_password_verify"
+    static let SV_FORGOT_PASSWORD_SET_PASSWORD = BASE_URL + "forgot_password_set_password"
     
 }
 

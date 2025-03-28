@@ -11,6 +11,8 @@ import SDWebImageSwiftUI
 struct ProductDetailView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @StateObject var detailVM: ProductDetailViewModel = ProductDetailViewModel(prodObj: ProductModel(dict: [:]) )
+    @Environment(\.dismiss) var dismiss
+    @GestureState private var dragOffset = CGSize.zero
     
     var body: some View {
         ZStack{
@@ -239,13 +241,16 @@ struct ProductDetailView: View {
             .padding(.horizontal, 20)
         }
         .alert(isPresented: $detailVM.showError, content: {
-            
             Alert(title: Text(Globs.AppName), message: Text(detailVM.errorMessage)  , dismissButton: .default(Text("Ok"))  )
         })
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
         .ignoresSafeArea()
+        .onBackSwipe {
+                   self.dismiss()
+               }
+        
     }
 }
 

@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+import SwiftUI
 
 extension String {
     var isValidEmail: Bool {
@@ -38,5 +40,18 @@ extension Date {
         dataFormat.dateFormat = format
         let date = self.addingTimeInterval(TimeInterval(60 * addMinTime))
         return dataFormat.string(from: date)
+    }
+}
+
+extension View {
+    func onBackSwipe(perform action: @escaping () -> Void) -> some View {
+        gesture(
+            DragGesture()
+                .onEnded({ value in
+                    if value.startLocation.x < 50 && value.translation.width > 80 {
+                        action()
+                    }
+                })
+        )
     }
 }

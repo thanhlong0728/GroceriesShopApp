@@ -70,6 +70,34 @@ struct MainTabView: View {
                 .background(Color.white)
                 .cornerRadius(15)
                 .shadow(color: Color.black.opacity(0.15), radius: 3, x: 0, y: -2)
+                
+                //                    TabView(selection:$homeVM.selectTab, content: {
+                //                        HomeView()
+                //                            .tabItem {
+                //                                Image(systemName: "house.fill")
+                //                                Text("Home")
+                //                            }
+                //                            .tag(1)
+                //                        ExploreView()
+                //                            .tabItem {
+                //                                Image(systemName: "cart.fill")
+                //                                Text("Cart")
+                //                            }
+                //                            .tag(2)
+                //                        FavouriteView()
+                //                            .tabItem {
+                //                                Image(systemName: "heart.fill")
+                //                                Text("Favories")
+                //                            }
+                //                            .tag(3)
+                //                        AccountView()
+                //                            .tabItem {
+                //                                Image(systemName: "person.crop.circle.fill")
+                //                                Text("Profile")
+                //                            }
+                //                            .tag(3)
+                //                    })
+                //                    .preferredColorScheme(.light)
             }
         }
         .navigationTitle("")
