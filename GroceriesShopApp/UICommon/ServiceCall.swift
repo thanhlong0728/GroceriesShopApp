@@ -26,10 +26,12 @@ class ServiceCall{
             var request = URLRequest(url: URL(string: path)!,timeoutInterval: 20)
             request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
             
-//            request.addValue( "BZqDyfT9hDaLt4UoCx25" , forHTTPHeaderField: "access_token")
-         
-            if(isToken) {
-                request.addValue( MainViewModel.shared.userObj.authToken , forHTTPHeaderField: "access_token")
+            if ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1" {
+                request.addValue( "WXuDej4ixRo395K01lm1" , forHTTPHeaderField: "access_token")
+            } else {
+                if(isToken) {
+                    request.addValue( MainViewModel.shared.userObj.authToken , forHTTPHeaderField: "access_token")
+                }
             }
 
             request.httpMethod = "POST"

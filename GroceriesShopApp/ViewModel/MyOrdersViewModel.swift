@@ -23,7 +23,7 @@ class MyOrdersViewModel: ObservableObject
         ServiceCall.post(parameter: [:], path: Globs.SV_MY_ORDERS_LIST, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
-                    self.listArr = (response.value(forKey: KKey.payload) as? NSArray ?? []).map({ obj in
+                    self.listArr = (response.value(forKey: KKey.payload) as? NSArray ?? []).reversed().map({ obj in
                         return MyOrderModel(dict: obj as? NSDictionary ?? [:])
                     })
                 

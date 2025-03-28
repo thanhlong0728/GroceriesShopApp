@@ -23,20 +23,20 @@ struct ExploreItemsView: View {
                 HStack{
                     EmptyView()
                         .frame(width: 40, height: 40)
+                    Button {
+                        mode.wrappedValue.dismiss()
+                    } label: {
+                        Image("back")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 25, height: 25)
+                    }
                     Spacer()
-                    Text("Category")
+                    Text(itemsVM.cObj.name)
                         .font(.customfont(.bold, fontSize: 20))
                         .frame(height: 46)
                     Spacer()
-                    Button(action: {
-                        
-                    }, label: {
-                        Image("add_green")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 20, height: 20)
-                    })
-                    .frame(width: 40, height: 40)
+                    
                 }
                 .padding(.top, .topInsets)
                 .padding(.horizontal, 20)

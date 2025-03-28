@@ -56,7 +56,7 @@ struct ProductDetailView: View {
                             detailVM.addSubQTY(isAdd: false)
                         } label: {
                             
-                            Image( "subtack"  )
+                            Image("subtack")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 20, height: 20)

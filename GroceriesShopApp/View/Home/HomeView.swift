@@ -41,25 +41,25 @@ struct HomeView: View {
                     .frame(height: 115)
                     .padding(.horizontal, 20)
                    
-                SectionTitleAll(title: "Exclusive offer", titleAll: "See All") {
-                    
-                }
-                .padding(.horizontal, 20)
-                ScrollView(.horizontal, showsIndicators: false ) {
-                    LazyHStack(spacing: 15) {
-                        ForEach (homeVM.offerArr, id: \.id) {
-                            pObj in
-                            ProductCell(pObj: pObj, didAddCart: {
-                                CartViewModel.serviceCallAddToCart(prodId: pObj.prodId, qty: 1) { isDone, msg in
-                                    self.homeVM.errorMessage = msg
-                                    self.homeVM.showError = true
-                                }
-                            })
-                        }
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 4)
-                }
+//                SectionTitleAll(title: "Exclusive offer", titleAll: "See All") {
+//                    
+//                }
+//                .padding(.horizontal, 20)
+//                ScrollView(.horizontal, showsIndicators: false ) {
+//                    LazyHStack(spacing: 15) {
+//                        ForEach (homeVM.offerArr, id: \.id) {
+//                            pObj in
+//                            ProductCell(pObj: pObj, didAddCart: {
+//                                CartViewModel.serviceCallAddToCart(prodId: pObj.prodId, qty: 1) { isDone, msg in
+//                                    self.homeVM.errorMessage = msg
+//                                    self.homeVM.showError = true
+//                                }
+//                            })
+//                        }
+//                    }
+//                    .padding(.horizontal, 20)
+//                    .padding(.vertical, 4)
+//                }
                 SectionTitleAll(title: "Best Selling", titleAll: "See All") {
                     
                 }

@@ -36,9 +36,9 @@ struct FavouriteView: View {
                 .background(Color.white)
                 .shadow(color: Color.black.opacity(0.2),  radius: 2 )
                 Spacer()
-                RoundButton(title: "Add All To Cart")
-                    .padding(.horizontal, 20)
-                    .padding(.bottom, .bottomInsets + 80)
+//                RoundButton(title: "Add All To Cart")
+//                    .padding(.horizontal, 20)
+//                    .padding(.bottom, .bottomInsets + 80)
             } 
         }
         .onAppear{
