@@ -50,12 +50,12 @@ class MyDetailsViewModel: ObservableObject
     }
     
     func setData() {
-        var userObj = MainViewModel.shared.userObj
+        let userObj = MainViewModel.shared.userObj
         txtName = userObj.name
         txtMobile = userObj.mobile
         txtMobileCode = userObj.mobileCode
         txtUsername = userObj.username
-        self.countryObj = Country(phoneCode: txtMobileCode.replacingOccurrences(of: "+", with: ""), isoCode: "IN")
+        self.countryObj = Country(phoneCode: txtMobileCode.replacingOccurrences(of: "+", with: ""), isoCode: "VN")
     }
     
     

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SignupView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @Environment(\.dismiss) var dismiss
     @StateObject var mainVM = MainViewModel.shared;
     
     var body: some View {
@@ -62,7 +63,11 @@ struct SignupView: View {
                         .padding(.bottom, .screenWidth * 0.02)
                     }
                     RoundButton(title: "Sign Up") {
-                        mainVM.serviceCallSignUp()
+                        mainVM.serviceCallSignUp() {success, error in
+                            if success {
+                                dismiss()
+                            }
+                        }
                     }
                     .padding(.bottom, .screenWidth * 0.05)
                     NavigationLink {

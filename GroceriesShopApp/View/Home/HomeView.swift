@@ -25,7 +25,7 @@ struct HomeView: View {
                             .scaledToFit()
                             .frame(width: 16, height: 16 )
                         
-                        Text("Dhaka, Banassre")
+                        Text("Groceries Shop")
                             .font(.customfont(.semibold, fontSize: 18))
                             .foregroundColor(.darkGray)
                     }

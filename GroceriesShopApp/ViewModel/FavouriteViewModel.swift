@@ -22,8 +22,6 @@ class FavouriteViewModel: ObservableObject
         serviceCallList()
     }
     
-    
-    
     //MARK: ServiceCall
     
     func serviceCallList(){
@@ -35,6 +33,29 @@ class FavouriteViewModel: ObservableObject
                         return ProductModel(dict: obj as? NSDictionary ?? [:])
                     })
                 
+                }else{
+                    self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Fail"
+                    self.showError = true
+                }
+            }
+        } failure: { error in
+            self.errorMessage = error?.localizedDescription ?? "Fail"
+            self.showError = true
+        }
+    }
+    
+    func serviceCallAddRemoveFav(prodId: Int){
+        ServiceCall.post(parameter: ["prod_id": prodId ], path: Globs.SV_ADD_REMOVE_FAVORITE, isToken: true ) { responseObj in
+            if let response = responseObj as? NSDictionary {
+                if response.value(forKey: KKey.status) as? String ?? "" == "1" {
+                    
+                    if let index = self.listArr.firstIndex(where: { $0.id == prodId }) {
+                            self.listArr.remove(at: index)
+                    }
+                    HomeViewModel.shared.serviceCallList()
+                    
+                    self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Done"
+                    self.showError = true
                 }else{
                     self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Fail"
                     self.showError = true

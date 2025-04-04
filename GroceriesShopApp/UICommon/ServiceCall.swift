@@ -27,7 +27,7 @@ class ServiceCall{
             request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
             
             if ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1" {
-                request.addValue( "WXuDej4ixRo395K01lm1" , forHTTPHeaderField: "access_token")
+                request.addValue( "2OKPn35q9ZsP5zyH3XuA" , forHTTPHeaderField: "access_token")
             } else {
                 if(isToken) {
                     request.addValue( MainViewModel.shared.userObj.authToken , forHTTPHeaderField: "access_token")

@@ -274,7 +274,6 @@ struct ProductDetailView_Previews: PreviewProvider {
                 "cat_name": "Frash Fruits & Vegetable",
                 "type_name": "Pulses",
                 "is_fav": 1
-            
         ])))
     }
 }

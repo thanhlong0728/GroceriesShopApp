@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct AccountView: View {
-//    @StateObject var userVM = UserModel.shared
-    var userObj = MainViewModel.shared.userObj
-    
+    @ObservedObject var userVM = MainViewModel.shared
+
     var body: some View {
         ZStack{
             VStack{
@@ -21,15 +20,18 @@ struct AccountView: View {
                         .cornerRadius(30)
                     VStack{
                         HStack{
-                            Text(userObj.username)
+                            Text(userVM.userObj.username)
                                 .font(.customfont(.bold, fontSize: 20))
                                 .foregroundColor(.primaryText)
-                            
-                            Image(systemName: "pencil")
-                                .foregroundColor(.primaryApp)
+                            NavigationLink {
+                                MyDetailsView()
+                            } label: {
+                                Image(systemName: "pencil")
+                                    .foregroundColor(.primaryApp)
+                            }
                             Spacer()
                         }
-                        Text(userObj.email)
+                        Text(userVM.userObj.email)
                             .font(.customfont(.regular, fontSize: 16))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading )
                             .accentColor(.secondaryText)

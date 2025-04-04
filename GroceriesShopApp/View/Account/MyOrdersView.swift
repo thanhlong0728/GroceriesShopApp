@@ -11,6 +11,7 @@ import SDWebImageSwiftUI
 struct MyOrdersView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @StateObject var myVM = MyOrdersViewModel.shared
+    @Environment(\.scenePhase) private var scenePhase
     
     var body: some View {
         ZStack{
@@ -121,8 +122,9 @@ struct MyOrdersView: View {
                 Spacer()
             }
         }
-        .onAppear{
-            
+                
+        .onAppear {
+            myVM.serviceCallList()
         }
         .navigationTitle("")
         .navigationBarHidden(true)

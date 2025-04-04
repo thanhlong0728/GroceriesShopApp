@@ -44,9 +44,12 @@ struct ExploreItemsView: View {
                     LazyVGrid(columns: columns,  spacing:15) {
                         ForEach(itemsVM.listArr, id: \.id) {
                             pObj in
-                            ProductCell( pObj: pObj, width: .infinity ) {
-                               
-                            }
+                            ProductCell(pObj: pObj, didAddCart: {
+                                CartViewModel.serviceCallAddToCart(prodId: pObj.prodId, qty: 1) { isDone, msg in
+                                    self.itemsVM.errorMessage = msg
+                                    self.itemsVM.showError = true
+                                }
+                            })
                         }
                     }
                     .padding(.vertical, 10)

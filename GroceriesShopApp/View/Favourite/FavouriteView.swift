@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FavouriteView: View {
     
-    @StateObject var favVM = FavouriteViewModel.shared
+    @StateObject var favVM = FavouriteViewModel()
     
     var body: some View {
         ZStack{
@@ -23,6 +23,7 @@ struct FavouriteView: View {
                 .padding(20)
                 .padding(.top, .topInsets + 46)
                 .padding(.bottom, .bottomInsets + 60)
+                .environmentObject(favVM)
             }
             VStack {
                 HStack{

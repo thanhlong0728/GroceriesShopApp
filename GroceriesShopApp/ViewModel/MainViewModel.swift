@@ -28,11 +28,11 @@ class MainViewModel: ObservableObject {
             // User Not Login
         }
         
-        #if DEBUG
-        txtUsername = "user4"
-        txtEmail = "test@gmail.com"
-        txtPassword = "123456"
-        #endif
+//        #if DEBUG
+//        txtUsername = "longtester"
+//        txtEmail = "long@gmail.com"
+//        txtPassword = "123456"
+//        #endif
     }
     
     func logout(){
@@ -73,7 +73,7 @@ class MainViewModel: ObservableObject {
         }
     }
     
-    func serviceCallSignUp(){
+    func serviceCallSignUp( completion: @escaping (_ success: Bool, _ error: String?) -> Void){
         if(txtUsername.isEmpty) {
             self.errorMessage = "please enter valid username"
             self.showError = true
@@ -95,7 +95,8 @@ class MainViewModel: ObservableObject {
         ServiceCall.post(parameter: [ "username": txtUsername , "email": txtEmail, "password": txtPassword, "dervice_token":"" ], path: Globs.SV_SIGN_UP) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
-                    self.setUserData(uDict: response.value(forKey: KKey.payload) as? NSDictionary ?? [:])
+//                    self.setUserData(uDict: response.value(forKey: KKey.payload) as? NSDictionary ?? [:])
+                    completion(true, nil)
                 }else{
                     self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Fail"
                     self.showError = true
