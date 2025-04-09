@@ -24,7 +24,6 @@ struct SignInView: View {
                 .resizable()
                 .scaledToFill()
                 .frame(width: .screenWidth, height: .screenWidth)
-                        
                 Spacer()
             }
             ScrollView{
@@ -39,7 +38,6 @@ struct SignInView: View {
                             isShowPicker = true
                             
                         }label: {
-//                            Image("")
                             if let countryObj = countryObj{
                                 Text("\( countryObj.isoCode.getFlag())")
                                     .font(.customfont(.medium, fontSize: 35))
@@ -84,38 +82,37 @@ struct SignInView: View {
                         .foregroundColor(.textTitle)
                         .multilineTextAlignment(.center)
                         .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity, alignment:.center)
-                        .padding(.bottom,25)
-                    Button{
+                        .padding(.bottom,10)
+                    HStack {
+                        Spacer()
+                        Button{
+                            
+                        } label: {
+                            Image("google_logo")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 20, height: 20)
+                                .background(Color(hex: "5383EC"))
+                        }
+                        .frame(width: 35, height: 35)
+                        .background(Color(hex: "5383EC"))
+                        .cornerRadius(20)
                         
-                    } label: {
-                        Image("google_logo")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 20, height: 20)
-                        Text("Continue with Google")
-                            .font(.customfont(.semibold, fontSize: 18))
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.center)
+                        Button{
+                            
+                        } label: {
+                            Image("fb_logo")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 20, height: 20)
+                                .background(Color(hex: "5383EC"))
+                        }
+                        .frame(width: 35, height: 35)
+                        .background(Color(hex: "5383EC"))
+                        .cornerRadius(20)
+                        Spacer()
                     }
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight:60, maxHeight:60)
-                    .background(Color(hex: "5383EC"))
-                    .cornerRadius(20)
                     .padding(.bottom,8)
-                    Button{
-                        
-                    } label: {
-                        Image("fb_logo")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 20, height: 20)
-                        Text("Continue with Facebook")
-                            .font(.customfont(.semibold, fontSize: 18))
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.center)
-                    }
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight:60, maxHeight:60)
-                    .background(Color(hex: "5383EC"))
-                    .cornerRadius(20)
                 }
                 .padding(.horizontal,20)
                 .frame(width: .screenWidth, alignment: .leading)

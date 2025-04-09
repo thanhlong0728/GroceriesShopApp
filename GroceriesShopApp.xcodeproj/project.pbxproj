@@ -68,6 +68,8 @@
 		04C34E3A2CB68625000B0719 /* ExploreItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C34E392CB68625000B0719 /* ExploreItemViewModel.swift */; };
 		04C34E3C2CB68787000B0719 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C34E3B2CB68787000B0719 /* ExploreViewModel.swift */; };
 		04C34E3E2CB687C6000B0719 /* ExploreCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C34E3D2CB687C6000B0719 /* ExploreCategoryCell.swift */; };
+		04C598CB2DA6B5260063F266 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 04C598CA2DA6B5260063F266 /* SwiftyJSON */; };
+		04C598CE2DA6B9910063F266 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 04C598CD2DA6B9910063F266 /* Moya */; };
 		04EE48112CBCF7F6007CA5F5 /* MyCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE48102CBCF7F6007CA5F5 /* MyCartView.swift */; };
 		04EE48132CBCF829007CA5F5 /* CartItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE48122CBCF829007CA5F5 /* CartItemRow.swift */; };
 		04EE48152CBCF8D3007CA5F5 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE48142CBCF8D3007CA5F5 /* AddressModel.swift */; };
@@ -214,7 +216,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C598CB2DA6B5260063F266 /* SwiftyJSON in Frameworks */,
 				041BA4932CAD43F200C47A7D /* SDWebImageSwiftUI in Frameworks */,
+				04C598CE2DA6B9910063F266 /* Moya in Frameworks */,
 				04F89E7E2CA5564300C14C5F /* CountryPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +282,22 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		04C598CC2DA6B9910063F266 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04C598D02DA6BDB10063F266 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				044478362CABA47B00B85009 /* ServiceCall.swift */,
+				044478382CABB02100B85009 /* Globs.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		04EE480F2CBCF7DC007CA5F5 /* Cart */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +334,7 @@
 				04F89E492CA519F600C14C5F /* GroceriesShopAppTests */,
 				04F89E532CA519F600C14C5F /* GroceriesShopAppUITests */,
 				04F89E372CA519F400C14C5F /* Products */,
+				04C598CC2DA6B9910063F266 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -330,6 +351,7 @@
 		04F89E382CA519F400C14C5F /* GroceriesShopApp */ = {
 			isa = PBXGroup;
 			children = (
+				04C598D02DA6BDB10063F266 /* Services */,
 				0444783A2CABB52E00B85009 /* Common */,
 				04F89E702CA5337800C14C5F /* UICommon */,
 				04F89E6F2CA5331800C14C5F /* ViewModel */,
@@ -445,8 +467,6 @@
 				04F89E782CA5417C00C14C5F /* RoundButton.swift */,
 				04F89E7F2CA5569B00C14C5F /* CountryPickerUI.swift */,
 				044478342CAB928C00B85009 /* LineTextField.swift */,
-				044478362CABA47B00B85009 /* ServiceCall.swift */,
-				044478382CABB02100B85009 /* Globs.swift */,
 				044C70D22CABFD0000CA470A /* TabButton.swift */,
 				041BA48B2CAD41BC00C47A7D /* SearchTextField.swift */,
 				041BA48D2CAD42D600C47A7D /* SectionTitleAll.swift */,
@@ -496,6 +516,8 @@
 			packageProductDependencies = (
 				04F89E7D2CA5564300C14C5F /* CountryPicker */,
 				041BA4922CAD43F200C47A7D /* SDWebImageSwiftUI */,
+				04C598CA2DA6B5260063F266 /* SwiftyJSON */,
+				04C598CD2DA6B9910063F266 /* Moya */,
 			);
 			productName = GroceriesShopApp;
 			productReference = 04F89E362CA519F400C14C5F /* GroceriesShopApp.app */;
@@ -572,6 +594,8 @@
 			packageReferences = (
 				04F89E7C2CA5564300C14C5F /* XCRemoteSwiftPackageReference "CountryPicker" */,
 				041BA4912CAD43F200C47A7D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				04C598C82DA6B5010063F266 /* XCRemoteSwiftPackageReference "Moya" */,
+				04C598C92DA6B5260063F266 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 04F89E372CA519F400C14C5F /* Products */;
 			projectDirPath = "";
@@ -1050,6 +1074,22 @@
 				minimumVersion = 3.1.2;
 			};
 		};
+		04C598C82DA6B5010063F266 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+		04C598C92DA6B5260063F266 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
 		04F89E7C2CA5564300C14C5F /* XCRemoteSwiftPackageReference "CountryPicker" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mobven/CountryPicker.git";
@@ -1065,6 +1105,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 041BA4912CAD43F200C47A7D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		04C598CA2DA6B5260063F266 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04C598C92DA6B5260063F266 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		04C598CD2DA6B9910063F266 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04C598C82DA6B5010063F266 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
 		};
 		04F89E7D2CA5564300C14C5F /* CountryPicker */ = {
 			isa = XCSwiftPackageProductDependency;

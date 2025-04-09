@@ -13,7 +13,7 @@ struct MyCartView: View {
     var body: some View {
         ZStack{
             if(cartVM.listArr.count == 0) {
-                Text("You Card is Empty")
+                Text("Your Cart Is Empty")
                     .font(.customfont(.bold, fontSize: 20))
             }
             ScrollView{

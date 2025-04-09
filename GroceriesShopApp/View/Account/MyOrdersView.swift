@@ -15,6 +15,10 @@ struct MyOrdersView: View {
     
     var body: some View {
         ZStack{
+            if(myVM.listArr.count == 0) {
+                Text("Your Order Is Empty")
+                    .font(.customfont(.bold, fontSize: 20))
+            }
             ScrollView{
                 LazyVStack(spacing: 15) {
                     ForEach( myVM.listArr , id: \.id, content: {

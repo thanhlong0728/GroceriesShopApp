@@ -13,6 +13,10 @@ struct FavouriteView: View {
     
     var body: some View {
         ZStack{
+            if(favVM.listArr.count == 0) {
+                Text("Your Favorite Is Empty")
+                    .font(.customfont(.bold, fontSize: 20))
+            }
             ScrollView{
                 LazyVStack {
                     ForEach( favVM.listArr , id: \.id, content: {

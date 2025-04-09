@@ -98,7 +98,7 @@ struct HomeView: View {
                 .padding(.bottom, 8)
                 ScrollView(.horizontal, showsIndicators: false ) {
                     LazyHStack(spacing: 15) {
-                        ForEach (homeVM.listArr, id: \.id) {
+                        ForEach (homeVM.listArr.reversed(), id: \.id) {
                             pObj in
                             
                             ProductCell(pObj: pObj, didAddCart: {
