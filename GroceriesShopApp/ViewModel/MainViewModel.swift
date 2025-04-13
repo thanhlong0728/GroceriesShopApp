@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 class MainViewModel: ObservableObject {
     static var shared: MainViewModel = MainViewModel()
@@ -38,6 +39,23 @@ class MainViewModel: ObservableObject {
     func logout(){
         Utils.UDSET(data: false, key: Globs.userLogin)
         isUserLogin = false
+
+        let realmConfig = Realm.Configuration.defaultConfiguration
+        do {
+            let realmURL = realmConfig.fileURL!
+            let realmURLs = [
+                realmURL,
+                realmURL.appendingPathExtension("lock"),
+                realmURL.appendingPathExtension("note"),
+                realmURL.appendingPathExtension("management")
+            ]
+            for URL in realmURLs {
+                try FileManager.default.removeItem(at: URL)
+            }
+            print("delete realm success")
+        } catch {
+            print("delete realm fail \(error)")
+        }
     }
     
     //MARK: ServiceCall

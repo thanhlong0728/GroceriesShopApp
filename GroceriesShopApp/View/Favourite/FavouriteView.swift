@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FavouriteView: View {
     
-    @StateObject var favVM = FavouriteViewModel()
+    @ObservedObject var favVM = FavouriteViewModel.shared
     
     var body: some View {
         ZStack{
@@ -47,7 +47,8 @@ struct FavouriteView: View {
             } 
         }
         .onAppear{
-            favVM.serviceCallList()
+//            favVM.loadFavouritesFromRealm()
+            print("listArr: \(favVM.listArr)")
         }
         .ignoresSafeArea()
     }

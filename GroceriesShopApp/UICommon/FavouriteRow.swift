@@ -46,7 +46,7 @@ struct FavouriteRow: View {
                     //                    .scaledToFit()
                     //                    .frame(width: 15, height: 15)
                     Button {
-                        favVM.serviceCallAddRemoveFav(prodId: fObj.prodId)
+                        favVM.removeFromFavourites(productId: fObj.prodId)
                     } label: {
                         Image("favorite")
                             .resizable()

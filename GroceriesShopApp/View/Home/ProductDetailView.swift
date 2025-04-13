@@ -10,7 +10,7 @@ import SDWebImageSwiftUI
 
 struct ProductDetailView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @StateObject var detailVM: ProductDetailViewModel = ProductDetailViewModel(prodObj: ProductModel(dict: [:]) )
+    @ObservedObject var detailVM: ProductDetailViewModel
     @Environment(\.dismiss) var dismiss
     @GestureState private var dragOffset = CGSize.zero
     
@@ -18,7 +18,7 @@ struct ProductDetailView: View {
         ZStack{
             ScrollView {
                 ZStack{
-                      Rectangle()
+                    Rectangle()
                         .foregroundColor( Color(hex: "F2F2F2") )
                         .frame(width: .screenWidth, height: .screenWidth * 0.8)
                         .cornerRadius(20, corner: [.bottomLeft, .bottomRight])
@@ -86,7 +86,7 @@ struct ProductDetailView: View {
                         Text( "$\(  (detailVM.pObj.offerPrice ?? detailVM.pObj.price) * Double(detailVM.qty) , specifier: "%.2f")"  )
                             .font(.customfont(.bold, fontSize: 28))
                             .foregroundColor(.primaryText)
-                            
+                        
                     }
                     .padding(.vertical, 8)
                     Divider()
@@ -150,7 +150,7 @@ struct ProductDetailView: View {
                                 .padding(15)
                         }
                         .foregroundColor(Color.primaryText)
-
+                        
                     }
                     
                     if(detailVM.isShowNutrition) {
@@ -189,8 +189,8 @@ struct ProductDetailView: View {
                             Image(systemName:  "star.fill")
                                 .resizable()
                                 .scaledToFit()
-                                    .foregroundColor( Color.orange)
-                                    .frame(width: 15, height: 15)
+                                .foregroundColor( Color.orange)
+                                .frame(width: 15, height: 15)
                         }
                     }
                     Button {
@@ -248,8 +248,11 @@ struct ProductDetailView: View {
         .navigationBarHidden(true)
         .ignoresSafeArea()
         .onBackSwipe {
-                   self.dismiss()
-               }
+            self.dismiss()
+        }
+        .onAppear {
+            detailVM.isFav = FavouriteViewModel.shared.isProductFavourite(productId: detailVM.pObj.prodId)
+        }
         
     }
 }

@@ -17,7 +17,7 @@ class ServiceCall {
                    case .success(let response):
                        do {
                            let json = try JSON(data: response.data)
-                           debugPrint("Response JSON: \(json)")
+//                           debugPrint("Response JSON: \(json)")
                            withSuccess(json.dictionaryObject as AnyObject)
                        } catch {
                            debugPrint("JSON Parsing Error: \(error)")

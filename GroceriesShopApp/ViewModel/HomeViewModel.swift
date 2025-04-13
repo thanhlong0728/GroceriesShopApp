@@ -59,6 +59,12 @@ class HomeViewModel: ObservableObject
         }
     }
     
+    func updateFavouriteStatus(productId: Int, isFavourite: Bool) {
+            if let index = listArr.firstIndex(where: { $0.prodId == productId }) {
+                listArr[index].isFav = isFavourite
+            }
+        }
+    
 }
 
 
