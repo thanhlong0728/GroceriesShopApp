@@ -301,6 +301,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		045B54152DABCDEF00664CC4 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				045B540E2DABAEF400664CC4 /* FavouriteProduct.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
 		04C598CC2DA6B9910063F266 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +378,7 @@
 		04F89E382CA519F400C14C5F /* GroceriesShopApp */ = {
 			isa = PBXGroup;
 			children = (
+				045B54152DABCDEF00664CC4 /* DataModels */,
 				04C598D02DA6BDB10063F266 /* Services */,
 				0444783A2CABB52E00B85009 /* Common */,
 				04F89E702CA5337800C14C5F /* UICommon */,
@@ -452,7 +461,6 @@
 				04535FA02CC0F592004E6B31 /* MyOrderModel.swift */,
 				04535FA82CC0F6E6004E6B31 /* OrderItemModel.swift */,
 				046121A62D8BF7FB00A5FC9E /* NotificationModel.swift */,
-				045B540E2DABAEF400664CC4 /* FavouriteProduct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
